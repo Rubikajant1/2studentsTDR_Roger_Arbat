@@ -1,0 +1,1893 @@
+Abella de la Conca	Pallars Jussà	158
+
+Abrera	Baix Llobregat	13014
+
+Agramunt	Urgell	5629
+
+Aguilar de Segarra	Bages	291
+
+Agullana	Alt Empordà	909
+
+Aiguafreda	Vallès Oriental	2576
+
+Aiguamúrcia	Alt Camp	957
+
+Aiguaviva	Gironès	802
+
+Aitona	Segrià	2603
+
+Albanyà	Alt Empordà	168
+
+Albatàrrec	Segrià	2251
+
+Albesa	Noguera	1584
+
+Albinyana	Baix Penedès	2677
+
+Albons	Baix Empordà	830
+
+Alcanar	Montsià	9943
+
+Alcanó	Segrià	239
+
+Alcarràs	Segrià	10018
+
+Alcoletge	Segrià	3594
+
+Alcover	Alt Camp	5348
+
+Aldover	Baix Ebre	880
+
+Alella	Maresme	10217
+
+Alfara de Carles	Baix Ebre	361
+
+Alfarràs	Segrià	2778
+
+Alforja	Baix Camp	2019
+
+Alfés	Segrià	281
+
+Algerri	Noguera	424
+
+Alguaire	Segrià	2986
+
+Alins	Pallars Sobirà	275
+
+Alió	Alt Camp	504
+
+Almacelles	Segrià	6896
+
+Almatret	Segrià	305
+
+Almenar	Segrià	3338
+
+Almoster	Baix Camp	1338
+
+Alp	Baixa Cerdanya	1728
+
+Alpens	Lluçanès	270
+
+Alpicat	Segrià	6387
+
+Alt Àneu	Pallars Sobirà	455
+
+Altafulla	Tarragonès	5838
+
+Alàs i Cerc	Alt Urgell	322
+
+Alòs de Balaguer	Noguera	120
+
+Amer	Selva	2415
+
+Amposta	Montsià	22637
+
+Anglesola	Urgell	1367
+
+Anglès	Selva	5969
+
+Arbeca	Garrigues	2081
+
+Arbolí	Baix Camp	129
+
+Arbúcies	Selva	6574
+
+Arenys de Mar	Maresme	16642
+
+Arenys de Munt	Maresme	9458
+
+Argelaguer	Garrotxa	452
+
+Argentona	Maresme	12844
+
+Argençola	Anoia	237
+
+Arnes	Terra Alta	463
+
+Arres	Vall d'Aran	64
+
+Arsèguel	Alt Urgell	78
+
+Artesa de Lleida	Segrià	1539
+
+Artesa de Segre	Noguera	3485
+
+Artés	Bages	6084
+
+Ascó	Ribera d'Ebre	1608
+
+Aspa	Segrià	220
+
+Avinyonet de Puigventós	Alt Empordà	1684
+
+Avinyonet del Penedès	Alt Penedès	1744
+
+Avinyó	Bages	2313
+
+Avià	Berguedà	2243
+
+Badalona	Barcelonès	227083
+
+Badia del Vallès	Vallès Occidental	13118
+
+Bagà	Berguedà	2182
+
+Baix Pallars	Pallars Sobirà	340
+
+Balaguer	Noguera	17705
+
+Balenyà	Osona	4036
+
+Balsareny	Bages	3328
+
+Banyeres del Penedès	Baix Penedès	3347
+
+Banyoles	Pla de l'Estany	20599
+
+Barbens	Pla d'Urgell	926
+
+Barberà de la Conca	Conca de Barberà	471
+
+Barberà del Vallès	Vallès Occidental	33575
+
+Barcelona	Barcelonès	1702547
+
+Bassella	Alt Urgell	210
+
+Batea	Terra Alta	1877
+
+Bausen	Vall d'Aran	60
+
+Begues	Baix Llobregat	7462
+
+Begur	Baix Empordà	4245
+
+Belianes	Urgell	517
+
+Bell-lloc d'Urgell	Pla d'Urgell	2359
+
+Bellaguarda	Garrigues	288
+
+Bellcaire d'Empordà	Baix Empordà	737
+
+Bellcaire d'Urgell	Noguera	1228
+
+Bellmunt d'Urgell	Noguera	182
+
+Bellmunt del Priorat	Priorat	298
+
+Bellprat	Anoia	69
+
+Bellpuig	Urgell	5276
+
+Bellvei	Baix Penedès	2417
+
+Bellver de Cerdanya	Baixa Cerdanya	2260
+
+Bellvís	Pla d'Urgell	2269
+
+Benavent de Segrià	Segrià	1578
+
+Benifallet	Baix Ebre	718
+
+Benissanet	Ribera d'Ebre	1186
+
+Berga	Berguedà	17160
+
+Besalú	Garrotxa	2583
+
+Bescanó	Gironès	5141
+
+Beuda	Garrotxa	204
+
+Bigues i Riells del Fai	Vallès Oriental	10036
+
+Biosca	Solsonès	176
+
+Biure	Alt Empordà	223
+
+Blancafort	Conca de Barberà	393
+
+Blanes	Selva	42198
+
+Boadella i les Escaules	Alt Empordà	260
+
+Bolvir	Baixa Cerdanya	497
+
+Bonastre	Baix Penedès	760
+
+Bordils	Gironès	1804
+
+Borrassà	Alt Empordà	773
+
+Borredà	Berguedà	419
+
+Bossòst	Vall d'Aran	1141
+
+Bot	Terra Alta	554
+
+Botarell	Baix Camp	1174
+
+Bovera	Garrigues	247
+
+Breda	Selva	3930
+
+Brunyola i Sant Martí Sapresa	Selva	395
+
+Bràfim	Alt Camp	696
+
+Bàscara	Alt Empordà	1057
+
+Cabanabona	Noguera	65
+
+Cabanelles	Alt Empordà	281
+
+Cabanes	Alt Empordà	978
+
+Cabassers	Priorat	302
+
+Cabra del Camp	Alt Camp	1321
+
+Cabrera d'Anoia	Anoia	1709
+
+Cabrera de Mar	Maresme	5018
+
+Cabrils	Maresme	7767
+
+Cabó	Alt Urgell	89
+
+Cadaqués	Alt Empordà	2918
+
+Calaf	Anoia	3618
+
+Calafell	Baix Penedès	31828
+
+Calders	Moianès	1114
+
+Caldes d'Estrac	Maresme	3259
+
+Caldes de Malavella	Selva	8509
+
+Caldes de Montbui	Vallès Oriental	18336
+
+Calella	Maresme	20369
+
+Calldetenes	Osona	2690
+
+Callús	Bages	2145
+
+Calonge de Segarra	Anoia	174
+
+Calonge i Sant Antoni	Baix Empordà	12316
+
+Camarasa	Noguera	805
+
+Camarles	Baix Ebre	3392
+
+Cambrils	Baix Camp	36849
+
+Campdevànol	Ripollès	3262
+
+Campelles	Ripollès	165
+
+Campins	Vallès Oriental	606
+
+Campllong	Gironès	544
+
+Campmany	Alt Empordà	693
+
+Camprodon	Ripollès	2527
+
+Camós	Pla de l'Estany	711
+
+Canejan	Vall d'Aran	101
+
+Canet d'Adri	Gironès	744
+
+Canet de Mar	Maresme	15140
+
+Canovelles	Vallès Oriental	17312
+
+Cantallops	Alt Empordà	346
+
+Canyelles	Garraf	5367
+
+Capafonts	Baix Camp	106
+
+Capellades	Anoia	5567
+
+Capolat	Berguedà	92
+
+Capçanes	Priorat	428
+
+Cardedeu	Vallès Oriental	19064
+
+Cardona	Bages	4574
+
+Carme	Anoia	814
+
+Caseres	Terra Alta	240
+
+Casserres	Berguedà	1676
+
+Cassà de la Selva	Gironès	10943
+
+Castell d'Aro, Platja d'Aro i s'Agaró	Baix Empordà	12981
+
+Castell de Mur	Pallars Jussà	170
+
+Castell de l'Areny	Berguedà	69
+
+Castellar de la Ribera	Solsonès	144
+
+Castellar de n'Hug	Berguedà	164
+
+Castellar del Riu	Berguedà	163
+
+Castellar del Vallès	Vallès Occidental	25322
+
+Castellbell i el Vilar	Bages	4138
+
+Castellbisbal	Vallès Occidental	12972
+
+Castellcir	Moianès	784
+
+Castelldans	Garrigues	891
+
+Castelldefels	Baix Llobregat	69450
+
+Castellet i la Gornal	Alt Penedès	2674
+
+Castellfollit de Riubregós	Anoia	151
+
+Castellfollit de la Roca	Garrotxa	957
+
+Castellfollit del Boix	Bages	459
+
+Castellgalí	Bages	2347
+
+Castellnou de Bages	Bages	1430
+
+Castellnou de Seana	Pla d'Urgell	723
+
+Castellolí	Anoia	658
+
+Castellserà	Urgell	993
+
+Castellterçol	Moianès	2773
+
+Castellvell del Camp	Baix Camp	2995
+
+Castellví de Rosanes	Baix Llobregat	2106
+
+Castellví de la Marca	Alt Penedès	1716
+
+Castelló d'Empúries	Alt Empordà	12163
+
+Castelló de Farfanya	Noguera	544
+
+Cava	Alt Urgell	39
+
+Celrà	Gironès	5561
+
+Centelles	Osona	7775
+
+Cercs	Berguedà	1193
+
+Cerdanyola del Vallès	Vallès Occidental	58100
+
+Cervelló	Baix Llobregat	9647
+
+Cervera	Segarra	9533
+
+Cervià de Ter	Gironès	997
+
+Cervià de les Garrigues	Garrigues	641
+
+Cistella	Alt Empordà	294
+
+Ciutadilla	Urgell	194
+
+Clariana de Cardener	Solsonès	161
+
+Colera	Alt Empordà	491
+
+Coll de Nargó	Alt Urgell	587
+
+Collbató	Baix Llobregat	4849
+
+Colldejou	Baix Camp	160
+
+Collsuspina	Moianès	389
+
+Colomers	Baix Empordà	205
+
+Conca de Dalt	Pallars Jussà	434
+
+Conesa	Conca de Barberà	113
+
+Constantí	Tarragonès	6888
+
+Copons	Anoia	351
+
+Corbera d'Ebre	Terra Alta	1019
+
+Corbera de Llobregat	Baix Llobregat	15726
+
+Corbins	Segrià	1502
+
+Cornellà de Llobregat	Baix Llobregat	91589
+
+Cornellà del Terri	Pla de l'Estany	2390
+
+Cornudella de Montsant	Priorat	1023
+
+Corçà	Baix Empordà	1282
+
+Creixell	Tarragonès	4190
+
+Crespià	Pla de l'Estany	250
+
+Cruïlles, Monells i Sant Sadurní de l'Heura	Baix Empordà	1329
+
+Cubelles	Garraf	17243
+
+Cubells	Noguera	343
+
+Cunit	Baix Penedès	15804
+
+Cànoves i Samalús	Vallès Oriental	3315
+
+Darnius	Alt Empordà	548
+
+Das	Baixa Cerdanya	270
+
+Deltebre	Baix Ebre	11951
+
+Dosrius	Maresme	6142
+
+Duesaigües	Baix Camp	222
+
+Es Bòrdes	Vall d'Aran	280
+
+Esparreguera	Baix Llobregat	22550
+
+Espinelves	Osona	254
+
+Esplugues de Llobregat	Baix Llobregat	47613
+
+Espolla	Alt Empordà	412
+
+Esponellà	Pla de l'Estany	438
+
+Espot	Pallars Sobirà	379
+
+Estamariu	Alt Urgell	132
+
+Estaràs	Segarra	162
+
+Esterri d'Àneu	Pallars Sobirà	921
+
+Esterri de Cardós	Pallars Sobirà	63
+
+Falset	Priorat	2856
+
+Farrera	Pallars Sobirà	127
+
+Figueres	Alt Empordà	48875
+
+Figuerola del Camp	Alt Camp	345
+
+Flaçà	Gironès	1145
+
+Flix	Ribera d'Ebre	3324
+
+Fogars de Montclús	Vallès Oriental	502
+
+Fogars de la Selva	Selva	1680
+
+Foixà	Baix Empordà	292
+
+Folgueroles	Osona	2263
+
+Fondarella	Pla d'Urgell	805
+
+Fonollosa	Bages	1585
+
+Font-rubí	Alt Penedès	1446
+
+Fontanals de Cerdanya	Baixa Cerdanya	531
+
+Fontanilles	Baix Empordà	168
+
+Fontcoberta	Pla de l'Estany	1503
+
+Foradada	Noguera	195
+
+Fornells de la Selva	Gironès	2781
+
+Fortià	Alt Empordà	801
+
+Forès	Conca de Barberà	40
+
+Freginals	Montsià	424
+
+Fulleda	Garrigues	91
+
+Fígols	Berguedà	41
+
+Fígols i Alinyà	Alt Urgell	243
+
+Gaià	Bages	178
+
+Gallifa	Vallès Occidental	172
+
+Gandesa	Terra Alta	3166
+
+Garcia	Ribera d'Ebre	543
+
+Garrigoles	Baix Empordà	185
+
+Garriguella	Alt Empordà	967
+
+Garrigàs	Alt Empordà	472
+
+Gavet de la Conca	Pallars Jussà	259
+
+Gavà	Baix Llobregat	48007
+
+Gelida	Alt Penedès	8098
+
+Ger	Baixa Cerdanya	494
+
+Gimenells i el Pla de la Font	Segrià	1097
+
+Ginestar	Ribera d'Ebre	794
+
+Girona	Gironès	107032
+
+Gironella	Berguedà	5055
+
+Gisclareny	Berguedà	30
+
+Godall	Montsià	612
+
+Golmés	Pla d'Urgell	1916
+
+Gombrèn	Ripollès	196
+
+Granera	Moianès	84
+
+Granollers	Vallès Oriental	64181
+
+Granyanella	Segarra	140
+
+Granyena de Segarra	Segarra	145
+
+Granyena de les Garrigues	Garrigues	163
+
+Gratallops	Priorat	229
+
+Gualba	Vallès Oriental	1738
+
+Gualta	Baix Empordà	419
+
+Guardiola de Berguedà	Berguedà	953
+
+Guils de Cerdanya	Baixa Cerdanya	566
+
+Guimerà	Urgell	246
+
+Guissona	Segarra	7635
+
+Guixers	Solsonès	134
+
+Gurb	Osona	2712
+
+Gósol	Berguedà	215
+
+Horta de Sant Joan	Terra Alta	1157
+
+Hostalric	Selva	4446
+
+Igualada	Anoia	41466
+
+Isona i Conca Dellà	Pallars Jussà	1046
+
+Isòvol	Baixa Cerdanya	330
+
+Ivars d'Urgell	Pla d'Urgell	1590
+
+Ivars de Noguera	Noguera	318
+
+Ivorra	Segarra	100
+
+Jafre	Baix Empordà	387
+
+Jorba	Anoia	827
+
+Josa i Tuixén	Alt Urgell	122
+
+Juià	Gironès	342
+
+Juncosa	Garrigues	390
+
+Juneda	Garrigues	3473
+
+Les	Vall d'Aran	1013
+
+Linyola	Pla d'Urgell	2749
+
+Lladorre	Pallars Sobirà	254
+
+Lladurs	Solsonès	185
+
+Llagostera	Gironès	9508
+
+Llambilles	Gironès	730
+
+Llanars	Ripollès	515
+
+Llançà	Alt Empordà	4943
+
+Llardecans	Segrià	428
+
+Llavorsí	Pallars Sobirà	336
+
+Lledó	Alt Empordà	829
+
+Lleida	Segrià	144739
+
+Llers	Alt Empordà	1248
+
+Lles de Cerdanya	Baixa Cerdanya	285
+
+Llimiana	Pallars Jussà	131
+
+Llinars del Vallès	Vallès Oriental	10740
+
+Lliçà d'Amunt	Vallès Oriental	16253
+
+Lliçà de Vall	Vallès Oriental	6861
+
+Llobera	Solsonès	209
+
+Llorac	Conca de Barberà	101
+
+Llorenç del Penedès	Baix Penedès	2431
+
+Lloret de Mar	Selva	42600
+
+Lluçà	Lluçanès	288
+
+Llívia	Baixa Cerdanya	1560
+
+Madremanya	Gironès	289
+
+Maials	Segrià	921
+
+Maià de Montcal	Garrotxa	491
+
+Maldà	Urgell	236
+
+Malgrat de Mar	Maresme	19377
+
+Malla	Osona	272
+
+Manlleu	Osona	21348
+
+Manresa	Bages	80201
+
+Margalef	Priorat	106
+
+Marganell	Bages	308
+
+Martorell	Baix Llobregat	28507
+
+Martorelles	Vallès Oriental	4987
+
+Marçà	Priorat	598
+
+Mas de Barberans	Montsià	547
+
+Masarac i Vilarnadal	Alt Empordà	297
+
+Masdenverge	Montsià	1149
+
+Masllorenç	Baix Penedès	573
+
+Maspujols	Baix Camp	889
+
+Masquefa	Anoia	10038
+
+Massalcoreig	Segrià	584
+
+Massoteres	Segarra	216
+
+Matadepera	Vallès Occidental	9815
+
+Mataró	Maresme	131798
+
+Maçanes	Selva	843
+
+Maçanet de Cabrenys	Alt Empordà	772
+
+Maçanet de la Selva	Selva	7962
+
+Mediona	Alt Penedès	2637
+
+Menàrguens	Noguera	789
+
+Meranges	Baixa Cerdanya	112
+
+Mieres	Garrotxa	349
+
+Miralcamp	Pla d'Urgell	1390
+
+Miravet	Ribera d'Ebre	688
+
+Moià	Moianès	6738
+
+Molins de Rei	Baix Llobregat	26948
+
+Mollerussa	Pla d'Urgell	15544
+
+Mollet de Peralada	Alt Empordà	215
+
+Mollet del Vallès	Vallès Oriental	52283
+
+Molló	Ripollès	374
+
+Monistrol de Calders	Moianès	761
+
+Monistrol de Montserrat	Bages	3198
+
+Mont-ral	Alt Camp	184
+
+Mont-ras	Baix Empordà	1690
+
+Mont-roig del Camp	Baix Camp	14114
+
+Montagut i Oix	Garrotxa	1000
+
+Montblanc	Conca de Barberà	7550
+
+Montbrió del Camp	Baix Camp	3128
+
+Montcada i Reixac	Vallès Occidental	37153
+
+Montclar	Berguedà	132
+
+Montellà i Martinet	Baixa Cerdanya	620
+
+Montesquiu	Osona	1099
+
+Montferrer i Castellbò	Alt Urgell	1164
+
+Montferri	Alt Camp	473
+
+Montgai	Noguera	637
+
+Montgat	Maresme	12625
+
+Montmajor	Berguedà	472
+
+Montmaneu	Anoia	200
+
+Montmeló	Vallès Oriental	8906
+
+Montoliu de Lleida	Segrià	475
+
+Montoliu de Segarra	Segarra	180
+
+Montornès de Segarra	Segarra	88
+
+Montornès del Vallès	Vallès Oriental	17089
+
+Montseny	Vallès Oriental	380
+
+Muntanyola	Osona	712
+
+Mura	Bages	232
+
+Móra d'Ebre	Ribera d'Ebre	5726
+
+Móra la Nova	Ribera d'Ebre	3314
+
+Nalec	Urgell	89
+
+Naut Aran	Vall d'Aran	1899
+
+Navarcles	Bages	6160
+
+Navars	Bages	6185
+
+Navata	Alt Empordà	1469
+
+Navès	Solsonès	300
+
+Nulles	Alt Camp	552
+
+Odèn	Solsonès	230
+
+Ogassa	Ripollès	218
+
+Olesa de Bonesvalls	Alt Penedès	2093
+
+Olesa de Montserrat	Baix Llobregat	24677
+
+Oliana	Alt Urgell	1839
+
+Oliola	Noguera	196
+
+Olius	Solsonès	1003
+
+Olivella	Garraf	4419
+
+Olost	Lluçanès	1216
+
+Olot	Garrotxa	38822
+
+Olvan	Berguedà	913
+
+Olèrdola	Alt Penedès	3946
+
+Ordis	Alt Empordà	400
+
+Organyà	Alt Urgell	811
+
+Oristà	Lluçanès	569
+
+Orpí	Anoia	178
+
+Orís	Osona	350
+
+Os de Balaguer	Noguera	1075
+
+Osor	Selva	418
+
+Ossó de Sió	Urgell	195
+
+Pacs del Penedès	Alt Penedès	935
+
+Palafolls	Maresme	9938
+
+Palafrugell	Baix Empordà	24300
+
+Palamós	Baix Empordà	18651
+
+Palau de Santa Eulàlia	Alt Empordà	136
+
+Palau-sator	Baix Empordà	300
+
+Palau-saverdera	Alt Empordà	1503
+
+Palau-solità i Plegamans	Vallès Occidental	15456
+
+Pallejà	Baix Llobregat	11825
+
+Palol de Revardit	Pla de l'Estany	465
+
+Pals	Baix Empordà	2556
+
+Pardines	Ripollès	161
+
+Parets del Vallès	Vallès Oriental	18881
+
+Parlavà	Baix Empordà	427
+
+Passanant i Belltall	Conca de Barberà	162
+
+Pau	Alt Empordà	584
+
+Paüls	Baix Ebre	544
+
+Pedret i Marzà	Alt Empordà	188
+
+Penelles	Noguera	435
+
+Perafita	Lluçanès	438
+
+Perafort	Tarragonès	1308
+
+Peralada	Alt Empordà	2047
+
+Peramola	Alt Urgell	357
+
+Piera	Anoia	17555
+
+Pineda de Mar	Maresme	29455
+
+Pinell de Solsonès	Solsonès	203
+
+Pinós	Solsonès	277
+
+Pira	Conca de Barberà	498
+
+Planoles	Ripollès	306
+
+Poboleda	Priorat	334
+
+Polinyà	Vallès Occidental	8555
+
+Pont de Molins	Alt Empordà	576
+
+Pontils	Conca de Barberà	123
+
+Pontons	Alt Penedès	518
+
+Ponts	Noguera	2703
+
+Pontós	Alt Empordà	290
+
+Porqueres	Pla de l'Estany	4804
+
+Porrera	Priorat	417
+
+Portbou	Alt Empordà	1082
+
+Pradell de la Teixeta	Priorat	178
+
+Prades	Baix Camp	665
+
+Prat de Comte	Terra Alta	185
+
+Pratdip	Baix Camp	759
+
+Prats de Lluçanès	Lluçanès	2688
+
+Prats i Sansor	Baixa Cerdanya	249
+
+Preixana	Urgell	406
+
+Preixens	Noguera	392
+
+Premià de Dalt	Maresme	10594
+
+Premià de Mar	Maresme	28951
+
+Prullans	Baixa Cerdanya	252
+
+Puig-reig	Berguedà	4489
+
+Puigcerdà	Baixa Cerdanya	10008
+
+Puigdàlber	Alt Penedès	629
+
+Puiggròs	Garrigues	258
+
+Puigpelat	Alt Camp	1205
+
+Puigverd d'Agramunt	Urgell	240
+
+Puigverd de Lleida	Segrià	1418
+
+Pujalt	Anoia	210
+
+Quart	Gironès	4099
+
+Queralbs	Ripollès	206
+
+Querol	Alt Camp	591
+
+Rabós	Alt Empordà	230
+
+Rajadell	Bages	594
+
+Rasquera	Ribera d'Ebre	792
+
+Regencós	Baix Empordà	279
+
+Rellinars	Vallès Occidental	920
+
+Renau	Tarragonès	158
+
+Reus	Baix Camp	109930
+
+Rialb	Pallars Sobirà	664
+
+Riba-roja d'Ebre	Ribera d'Ebre	1128
+
+Ribera d'Ondara	Segarra	454
+
+Ribera d'Urgellet	Alt Urgell	965
+
+Ribes de Freser	Ripollès	1847
+
+Riells i Viabrea	Selva	4499
+
+Riner	Solsonès	262
+
+Ripoll	Ripollès	10692
+
+Ripollet	Vallès Occidental	39462
+
+Riu de Cerdanya	Baixa Cerdanya	99
+
+Riudarenes	Selva	2445
+
+Riudaura	Garrotxa	529
+
+Riudecanyes	Baix Camp	1345
+
+Riudecols	Baix Camp	1232
+
+Riudellots de la Selva	Selva	2142
+
+Riudoms	Baix Camp	6905
+
+Riumors	Alt Empordà	262
+
+Rocafort de Queralt	Conca de Barberà	246
+
+Roda de Berà	Tarragonès	8048
+
+Roda de Ter	Osona	6900
+
+Rodonyà	Alt Camp	521
+
+Roquetes	Baix Ebre	8369
+
+Roses	Alt Empordà	20362
+
+Rosselló	Segrià	3353
+
+Rubió	Anoia	237
+
+Rubí	Vallès Occidental	81532
+
+Rupit i Pruit	Osona	281
+
+Rupià	Baix Empordà	330
+
+Sabadell	Vallès Occidental	222177
+
+Sagàs	Berguedà	153
+
+Saldes	Berguedà	301
+
+Sales de Llierca	Garrotxa	158
+
+Sallent	Bages	6927
+
+Salomó	Tarragonès	525
+
+Salou	Tarragonès	30810
+
+Salt	Gironès	33904
+
+Salàs de Pallars	Pallars Jussà	349
+
+Sanaüja	Segarra	379
+
+Sant Adrià de Besòs	Barcelonès	38490
+
+Sant Agustí de Lluçanès	Osona	108
+
+Sant Andreu Salou	Gironès	172
+
+Sant Andreu de Llavaneres	Maresme	11933
+
+Sant Andreu de la Barca	Baix Llobregat	27062
+
+Sant Aniol de Finestres	Garrotxa	372
+
+Sant Antoni de Vilamajor	Vallès Oriental	6668
+
+Sant Bartomeu del Grau	Osona	943
+
+Sant Boi de Llobregat	Baix Llobregat	84831
+
+Sant Boi de Lluçanès	Osona	575
+
+Sant Cebrià de Vallalta	Maresme	3828
+
+Sant Celoni	Vallès Oriental	18761
+
+Sant Climent Sescebes	Alt Empordà	675
+
+Sant Climent de Llobregat	Baix Llobregat	4182
+
+Sant Cugat Sesgarrigues	Alt Penedès	1031
+
+Sant Cugat del Vallès	Vallès Occidental	98621
+
+Sant Esteve Sesrovires	Baix Llobregat	8060
+
+Sant Esteve de Palautordera	Vallès Oriental	3080
+
+Sant Esteve de la Sarga	Pallars Jussà	127
+
+Sant Feliu Sasserra	Bages	629
+
+Sant Feliu de Buixalleu	Selva	878
+
+Sant Feliu de Codines	Vallès Oriental	6661
+
+Sant Feliu de Guíxols	Baix Empordà	23050
+
+Sant Feliu de Llobregat	Baix Llobregat	46554
+
+Sant Feliu de Pallerols	Garrotxa	1692
+
+Sant Ferriol	Garrotxa	233
+
+Sant Fost de Campsentelles	Vallès Oriental	9227
+
+Sant Fruitós de Bages	Bages	9248
+
+Sant Gregori	Gironès	4243
+
+Sant Guim de Freixenet	Segarra	1222
+
+Sant Guim de la Plana	Segarra	193
+
+Sant Hilari Sacalm	Selva	5982
+
+Sant Hipòlit de Voltregà	Osona	3687
+
+Sant Iscle de Vallalta	Maresme	1458
+
+Sant Jaume d'Enveja	Montsià	3667
+
+Sant Jaume de Frontanyà	Berguedà	26
+
+Sant Jaume de Llierca	Garrotxa	849
+
+Sant Jaume dels Domenys	Baix Penedès	2803
+
+Sant Joan Despí	Baix Llobregat	35083
+
+Sant Joan de Mollet	Gironès	526
+
+Sant Joan de Vilatorrada	Bages	11017
+
+Sant Joan de les Abadesses	Ripollès	3375
+
+Sant Joan les Fonts	Garrotxa	3111
+
+Sant Jordi Desvalls	Gironès	871
+
+Sant Julià de Cerdanyola	Berguedà	232
+
+Sant Julià de Ramis	Gironès	3644
+
+Sant Julià de Vilatorta	Osona	3297
+
+Sant Julià del Llor i Bonmatí	Selva	1373
+
+Sant Just Desvern	Baix Llobregat	20881
+
+Sant Llorenç Savall	Vallès Occidental	2586
+
+Sant Llorenç d'Hortons	Alt Penedès	2617
+
+Sant Llorenç de Morunys	Solsonès	1003
+
+Sant Llorenç de la Muga	Alt Empordà	258
+
+Sant Martí Sarroca	Alt Penedès	3391
+
+Sant Martí Sesgueioles	Anoia	360
+
+Sant Martí Vell	Gironès	264
+
+Sant Martí d'Albars	Lluçanès	140
+
+Sant Martí de Centelles	Osona	1259
+
+Sant Martí de Llémena	Gironès	706
+
+Sant Martí de Riucorb	Urgell	673
+
+Sant Martí de Tous	Anoia	1275
+
+Sant Mateu de Bages	Bages	637
+
+Sant Miquel de Campmajor	Pla de l'Estany	254
+
+Sant Miquel de Fluvià	Alt Empordà	839
+
+Sant Mori	Alt Empordà	163
+
+Sant Pau de Segúries	Ripollès	724
+
+Sant Pere Pescador	Alt Empordà	2241
+
+Sant Pere Sallavinera	Anoia	158
+
+Sant Pere de Ribes	Garraf	32121
+
+Sant Pere de Riudebitlles	Alt Penedès	2497
+
+Sant Pere de Torelló	Osona	2592
+
+Sant Pere de Vilamajor	Vallès Oriental	4941
+
+Sant Pol de Mar	Maresme	5834
+
+Sant Quintí de Mediona	Alt Penedès	2504
+
+Sant Quirze Safaja	Moianès	669
+
+Sant Quirze de Besora	Osona	2127
+
+Sant Quirze del Vallès	Vallès Occidental	20161
+
+Sant Ramon	Segarra	495
+
+Sant Sadurní d'Anoia	Alt Penedès	12915
+
+Sant Sadurní d'Osormort	Osona	84
+
+Sant Salvador de Guardiola	Bages	3476
+
+Sant Vicenç de Castellet	Bages	10131
+
+Sant Vicenç de Montalt	Maresme	6712
+
+Sant Vicenç de Torelló	Osona	2092
+
+Sant Vicenç dels Horts	Baix Llobregat	28568
+
+Santa Bàrbara	Montsià	3827
+
+Santa Cecília de Voltregà	Osona	192
+
+Santa Coloma de Cervelló	Baix Llobregat	8335
+
+Santa Coloma de Farners	Selva	13657
+
+Santa Coloma de Gramenet	Barcelonès	121203
+
+Santa Coloma de Queralt	Conca de Barberà	2800
+
+Santa Cristina d'Aro	Baix Empordà	5866
+
+Santa Eugènia de Berga	Osona	2308
+
+Santa Eulàlia de Riuprimer	Osona	1487
+
+Santa Eulàlia de Ronçana	Vallès Oriental	7911
+
+Santa Fe del Penedès	Alt Penedès	360
+
+Santa Llogaia d'Àlguema	Alt Empordà	397
+
+Santa Margarida de Montbui	Anoia	10549
+
+Santa Margarida i els Monjos	Alt Penedès	7736
+
+Santa Maria d'Oló	Moianès	1077
+
+Santa Maria de Besora	Osona	164
+
+Santa Maria de Martorelles	Vallès Oriental	873
+
+Santa Maria de Merlès	Berguedà	175
+
+Santa Maria de Miralles	Anoia	137
+
+Santa Maria de Palautordera	Vallès Oriental	10008
+
+Santa Oliva	Baix Penedès	3672
+
+Santa Pau	Garrotxa	1611
+
+Santa Perpètua de Mogoda	Vallès Occidental	25960
+
+Santa Susanna	Maresme	4023
+
+Santpedor	Bages	7716
+
+Sarral	Conca de Barberà	1583
+
+Sarrià de Ter	Gironès	5392
+
+Sarroca de Bellera	Pallars Jussà	115
+
+Sarroca de Lleida	Segrià	381
+
+Saus, Camallera i Llampaies	Alt Empordà	898
+
+Savallà del Comtat	Conca de Barberà	50
+
+Senan	Conca de Barberà	46
+
+Senterada	Pallars Jussà	158
+
+Sentmenat	Vallès Occidental	9553
+
+Serinyà	Pla de l'Estany	1198
+
+Serra de Daró	Baix Empordà	229
+
+Seròs	Segrià	1902
+
+Setcases	Ripollès	191
+
+Seva	Osona	3798
+
+Sidamon	Pla d'Urgell	767
+
+Sils	Selva	6720
+
+Sitges	Garraf	32405
+
+Siurana	Alt Empordà	180
+
+Sobremunt	Lluçanès	101
+
+Solivella	Conca de Barberà	626
+
+Solsona	Solsonès	9480
+
+Sora	Osona	219
+
+Soriguera	Pallars Sobirà	444
+
+Sort	Pallars Sobirà	2213
+
+Soses	Segrià	1881
+
+Subirats	Alt Penedès	3281
+
+Sudanell	Segrià	897
+
+Sunyer	Segrià	313
+
+Susqueda	Selva	97
+
+Súria	Bages	6090
+
+Tagamanent	Vallès Oriental	339
+
+Talamanca	Bages	212
+
+Talarn	Pallars Jussà	539
+
+Talavera	Segarra	280
+
+Taradell	Osona	6844
+
+Tarragona	Tarragonès	141151
+
+Tarroja de Segarra	Segarra	170
+
+Tarrés	Garrigues	125
+
+Tavertet	Osona	131
+
+Tavèrnoles	Osona	341
+
+Teià	Maresme	6818
+
+Terrades	Alt Empordà	345
+
+Terrassa	Vallès Occidental	228708
+
+Terrassola i Lavit	Alt Penedès	1509
+
+Tiana	Maresme	9305
+
+Tiurana	Noguera	66
+
+Tivenys	Baix Ebre	936
+
+Tivissa	Ribera d'Ebre	1632
+
+Tona	Osona	8511
+
+Tordera	Maresme	18780
+
+Torelló	Osona	15093
+
+Tornabous	Urgell	851
+
+Torre-serona	Segrià	435
+
+Torrebesses	Segrià	273
+
+Torredembarra	Tarragonès	17984
+
+Torrefarrera	Segrià	4861
+
+Torrefeta i Florejacs	Segarra	605
+
+Torregrossa	Pla d'Urgell	2194
+
+Torrelameu	Noguera	766
+
+Torrelles de Foix	Alt Penedès	2657
+
+Torrelles de Llobregat	Baix Llobregat	6155
+
+Torrent	Baix Empordà	173
+
+Torres de Segre	Segrià	2318
+
+Torroella de Fluvià	Alt Empordà	772
+
+Torroella de Montgrí	Baix Empordà	12521
+
+Torroja del Priorat	Priorat	137
+
+Tortellà	Garrotxa	828
+
+Tortosa	Baix Ebre	35265
+
+Torà	Solsonès	1207
+
+Toses	Ripollès	191
+
+Tossa de Mar	Selva	6274
+
+Tremp	Pallars Jussà	6015
+
+Tàrrega	Urgell	18542
+
+Térmens	Noguera	1347
+
+Tírvia	Pallars Sobirà	144
+
+Ullastrell	Vallès Occidental	2176
+
+Ullastret	Baix Empordà	260
+
+Ulldecona	Montsià	6551
+
+Ulldemolins	Priorat	416
+
+Ullà	Baix Empordà	1219
+
+Ultramort	Baix Empordà	214
+
+Urús	Baixa Cerdanya	207
+
+Vacarisses	Vallès Occidental	7563
+
+Vall de Cardós	Pallars Sobirà	375
+
+Vall-llobrega	Baix Empordà	906
+
+Vallbona d'Anoia	Anoia	1406
+
+Vallbona de les Monges	Urgell	223
+
+Vallcebre	Berguedà	271
+
+Vallclara	Conca de Barberà	89
+
+Vallfogona de Balaguer	Noguera	2000
+
+Vallfogona de Ripollès	Ripollès	222
+
+Vallfogona de Riucorb	Conca de Barberà	97
+
+Vallgorguina	Vallès Oriental	3198
+
+Vallirana	Baix Llobregat	15985
+
+Vallmoll	Alt Camp	1951
+
+Vallromanes	Vallès Oriental	2742
+
+Valls	Alt Camp	25047
+
+Vandellòs i l'Hospitalet de l'Infant	Baix Camp	7104
+
+Veciana	Anoia	172
+
+Ventalló	Alt Empordà	891
+
+Verdú	Urgell	886
+
+Verges	Baix Empordà	1187
+
+Vespella de Gaià	Tarragonès	506
+
+Vic	Osona	49530
+
+Vidreres	Selva	8538
+
+Vidrà	Osona	
+
+Vielha e Mijaran	Vall d'Aran	
+
+Vila-rodona	Alt Camp	
+
+Vila-sacra	Alt Empordà	
+
+Vila-sana	Pla d'Urgell	
+
+Vila-seca	Tarragonès	
+
+Vilabella	Alt Camp	
+
+Vilabertran	Alt Empordà	
+
+Vilablareix	Gironès	
+
+Vilada	Berguedà	
+
+Viladamat	Alt Empordà	
+
+Viladasens	Gironès	
+
+Viladecans	Baix Llobregat	
+
+Viladecavalls	Vallès Occidental	
+
+Vilademuls	Pla de l'Estany	
+
+Viladrau	Osona	
+
+Vilafant	Alt Empordà	
+
+Vilafranca del Penedès	Alt Penedès	
+
+Vilagrassa	Urgell	
+
+Vilajuïga	Alt Empordà	
+
+Vilalba Sasserra	Vallès Oriental	
+
+Vilalba dels Arcs	Terra Alta	
+
+Vilaller	Alta Ribagorça	
+
+Vilallonga de Ter	Ripollès	
+
+Vilallonga del Camp	Tarragonès	
+
+Vilamacolum	Alt Empordà	
+
+Vilamalla	Alt Empordà	
+
+Vilamaniscle	Alt Empordà	
+
+Vilamòs	Vall d'Aran	
+
+Vilanant	Alt Empordà	
+
+Vilanova d'Escornalbou	Baix Camp	
+
+Vilanova de Bellpuig	Pla d'Urgell	
+
+Vilanova de Meià	Noguera	
+
+Vilanova de Prades	Conca de Barberà	
+
+Vilanova de Sau	Osona	
+
+Vilanova de Segrià	Segrià	
+
+Vilanova de l'Aguda	Noguera	
+
+Vilanova de la Barca	Segrià	
+
+Vilanova del Camí	Anoia	
+
+Vilanova del Vallès	Vallès Oriental	
+
+Vilanova i la Geltrú	Garraf	
+
+Vilaplana	Baix Camp	
+
+Vilassar de Dalt	Maresme	
+
+Vilassar de Mar	Maresme	
+
+Vilaverd	Conca de Barberà	
+
+Vilaür	Alt Empordà	
+
+Vilobí d'Onyar	Selva	
+
+Vilobí del Penedès	Alt Penedès	
+
+Vilopriu	Baix Empordà	
+
+Vimbodí i Poblet	Conca de Barberà	
+
+Vinaixa	Garrigues	
+
+Vinebre	Ribera d'Ebre	
+
+Vinyols i els Arcs	Baix Camp	
+
+Viver i Serrateix	Berguedà	
+
+Vulpellac, Fonteta i Peratallada	Baix Empordà	
+
+Xerta	Baix Ebre	
+
+el Bruc	Anoia	
+
+el Brull	Osona	
+
+el Catllar	Tarragonès	
+
+el Cogul	Garrigues	
+
+el Far d'Empordà	Alt Empordà	
+
+el Figueró i Montmany	Vallès Oriental	
+
+el Lloar	Priorat	
+
+el Masnou	Maresme	
+
+el Masroig	Priorat	
+
+el Milà	Alt Camp	
+
+el Molar	Priorat	
+
+el Montmell	Baix Penedès	
+
+el Morell	Tarragonès	
+
+el Palau d'Anglesola	Pla d'Urgell	
+
+el Papiol	Baix Llobregat	
+
+el Perelló	Baix Ebre	
+
+el Pinell de Brai	Terra Alta	
+
+el Pla de Santa Maria	Alt Camp	
+
+el Pla del Penedès	Alt Penedès	
+
+el Poal	Pla d'Urgell	
+
+el Pont d'Armentera	Alt Camp	
+
+el Pont de Bar	Alt Urgell	
+
+el Pont de Suert	Alta Ribagorça	
+
+el Pont de Vilomara i Rocafort	Bages	
+
+el Port de la Selva	Alt Empordà	
+
+el Prat de Llobregat	Baix Llobregat	
+
+el Rourell	Alt Camp	
+
+el Soleràs	Garrigues	
+
+el Vendrell	Baix Penedès	
+
+el Vilosell	Garrigues	
+
+els Alamús	Segrià	
+
+els Garidells	Alt Camp	
+
+els Guiamets	Priorat	
+
+els Hostalets de Pierola	Anoia	
+
+els Omellons	Garrigues	
+
+els Omells de na Gaia	Urgell	
+
+els Pallaresos	Tarragonès	
+
+els Plans de Sió	Segarra	
+
+els Prats de Rei	Anoia	
+
+els Torms	Garrigues	
+
+l'Albagés	Garrigues	
+
+l'Albi	Garrigues	
+
+l'Albiol	Baix Camp	
+
+l'Aldea	Baix Ebre	
+
+l'Aleixar	Baix Camp	
+
+l'Ametlla de Mar	Baix Ebre	
+
+l'Ametlla del Vallès	Vallès Oriental	
+
+l'Ampolla	Baix Ebre	
+
+l'Arboç	Baix Penedès	
+
+l'Argentera	Baix Camp	
+
+l'Armentera	Alt Empordà	
+
+l'Escala	Alt Empordà	
+
+l'Espluga Calba	Garrigues	
+
+l'Espluga de Francolí	Conca de Barberà	
+
+l'Espunyola	Berguedà	
+
+l'Esquirol	Osona	
+
+l'Estany	Moianès	
+
+l'Hospitalet de Llobregat	Barcelonès	
+
+la Baronia de Rialb	Noguera	
+
+la Bisbal d'Empordà	Baix Empordà	
+
+la Bisbal de Montsant	Priorat	
+
+la Bisbal del Penedès	Baix Penedès	
+
+la Canonja	Tarragonès	
+
+la Cellera de Ter	Selva	
+
+la Coma i la Pedra	Solsonès	
+
+la Fatarella	Terra Alta	
+
+la Febró	Baix Camp	
+
+la Figuera	Priorat	
+
+la Floresta	Garrigues	
+
+la Fuliola	Urgell	
+
+la Galera	Montsià	
+
+la Garriga	Vallès Oriental	
+
+la Granada	Alt Penedès	
+
+la Granadella	Garrigues	
+
+la Granja d'Escarp	Segrià	
+
+la Guingueta d'Àneu	Pallars Sobirà	
+
+la Jonquera	Alt Empordà	
+
+la Llacuna	Anoia	
+
+la Llagosta	Vallès Oriental	
+
+la Masó	Alt Camp	
+
+la Molsosa	Solsonès	
+
+la Morera de Montsant	Priorat	
+
+la Nou de Berguedà	Berguedà	
+
+la Nou de Gaià	Tarragonès	
+
+la Palma d'Ebre	Ribera d'Ebre	
+
+la Palma de Cervelló	Baix Llobregat	
+
+la Pera	Baix Empordà	
+
+la Pobla de Claramunt	Anoia	
+
+la Pobla de Cérvoles	Garrigues	
+
+la Pobla de Lillet	Berguedà	
+
+la Pobla de Mafumet	Tarragonès	
+
+la Pobla de Massaluca	Terra Alta	
+
+la Pobla de Montornès	Tarragonès	
+
+la Pobla de Segur	Pallars Jussà	
+
+la Portella	Segrià	
+
+la Quar	Berguedà	
+
+la Riba	Alt Camp	
+
+la Riera de Gaià	Tarragonès	
+
+la Roca del Vallès	Vallès Oriental	
+
+la Ràpita	Montsià	
+
+la Secuita	Tarragonès	
+
+la Selva de Mar	Alt Empordà	
+
+la Selva del Camp	Baix Camp	
+
+la Sentiu de Sió	Noguera	
+
+la Seu d'Urgell	Alt Urgell	
+
+la Sénia	Montsià	
+
+la Tallada d'Empordà	Baix Empordà	
+
+la Torre de Cabdella	Pallars Jussà	
+
+la Torre de Claramunt	Anoia	
+
+la Torre de Fontaubella	Priorat	
+
+la Torre de l'Espanyol	Ribera d'Ebre	
+
+la Vajol	Alt Empordà	
+
+la Vall d'en Bas	Garrotxa	
+
+la Vall de Bianya	Garrotxa	
+
+la Vall de Boí	Alta Ribagorça	
+
+la Vansa i Fórnols	Alt Urgell	
+
+la Vilella Alta	Priorat	
+
+la Vilella Baixa	Priorat	
+
+les Avellanes i Santa Linya	Noguera	
+
+les Borges Blanques	Garrigues	
+
+les Borges del Camp	Baix Camp	
+
+les Cabanyes	Alt Penedès	
+
+les Franqueses del Vallès	Vallès Oriental	
+
+les Llosses	Ripollès	
+
+les Masies de Roda	Osona	
+
+les Masies de Voltregà	Osona	
+
+les Oluges	Segarra	167
+
+les Piles	Conca de Barberà	
+
+les Planes d'Hostoles	Garrotxa	
+
+les Preses	Garrotxa
+
+les Valls d'Aguilar	Alt Urgell
+
+les Valls de Valira	Alt Urgell
+
+Àger	Noguera
+
+Òdena	Anoia
+
+Òrrius	Maresme
