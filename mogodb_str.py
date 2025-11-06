@@ -1,1 +1,1 @@
-string = 'mongodb+srv://2studentstdr:092students@cluster0.1ktylzw.mongodb.net/'
+string = ''
