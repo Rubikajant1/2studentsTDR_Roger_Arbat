@@ -1,6 +1,7 @@
 from pymongo import MongoClient
+from web_2Students.mogodb_str import string
 
-db_client = MongoClient("mongodb+srv://2studentstdr:092students@cluster0.1ktylzw.mongodb.net/")
+db_client = MongoClient(string)
 
 database = db_client["2Students_database"]
 
