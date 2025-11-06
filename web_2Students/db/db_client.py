@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from mogodb_str import string
+from mongodb_str import string
 
 db_client = MongoClient(string)
 
