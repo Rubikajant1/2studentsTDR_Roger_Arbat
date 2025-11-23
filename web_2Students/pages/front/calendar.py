@@ -1,5 +1,5 @@
 import reflex as rx
-from web_2Students.pages.backend.back_calendar import Calendari as cnd
+from web_2Students.pages.backend.back_stuent_coach import NewCoach as cnd
 
 def calendar_for_desktop() -> rx.Component:
     return rx.box(

@@ -1,12 +1,164 @@
 #Importacions
 import reflex as rx
 from web_2Students.db.db_client import db
-from web_2Students.pages.backend.passwords import Passwords as pw
+import secrets
+from typing import Optional
+import hashlib
 
 
 user_coach = db['student_coach']
 
+
 class NewCoach(rx.State):
+    
+    dilluns: str = ""
+    dimarts: str = ""
+    dimecres: str = ""
+    dijous: str = ""
+    divendres: str = ""
+    dissabte_mati: str = ""
+    dissabte_tarda: str = ""
+    diumenge_mati: str = ""
+    diumenge_tarda: str = ""
+    especificacions_dilluns: str = ""
+    especificacions_dimarts: str = ""
+    especificacions_dimecres: str = ""
+    especificacions_dijous: str = ""
+    especificacions_divendres: str = ""
+    especificacions_dissabte_mati: str = ""
+    especificacions_dissabte_tarda: str = ""
+    especificacions_diumenge_mati: str = ""
+    especificacions_diumenge_tarda: str = ""
+    
+    
+    ### Contrassenya ###
+    
+    MAX_PASSWORD_LENGTH: int = 128
+    MIN_PASSWORD_LENGTH: int = 8
+    MAX_VALIDATION_ATTEMPTS: int = 5
+    
+    # Variables privadas
+    _first_password: str = ""
+    _second_password: str = ""
+    _password_hash: Optional[bytes] = None
+    _validation_attempts: int = 0
+    _last_validation_state: tuple = ("", "")  # Guarda ultim
+    
+    # Variables públicas
+    same_passwords: bool = False
+    error_message: str = ""
+    is_rate_limited: bool = False
+
+    
+    @rx.event()
+    def set_first_password(self, first_password: str):
+        """Establir la primera contrasenya amb validació de longitud"""
+        if self.is_rate_limited:
+            self.error_message = "Demasiats intents. Espera un moment."
+            return
+            
+        if len(first_password) > self.MAX_PASSWORD_LENGTH:
+            self.error_message = f"Contrassenya massa llarga (màx. {self.MAX_PASSWORD_LENGTH} caràcters)"
+            return
+            
+        self._first_password = first_password
+        self.error_message = ""
+        # NO validar aquí, només guardar
+        
+        
+    @rx.event()
+    def set_second_password(self, second_password: str):
+        """Establir la segona contrasenya amb validació de longitud"""
+        if self.is_rate_limited:
+            self.error_message = "Demasiats intents. Espera un moment."
+            return
+            
+        if len(second_password) > self.MAX_PASSWORD_LENGTH:
+            self.error_message = f"Contrassenya massa llarga (màx. {self.MAX_PASSWORD_LENGTH} caràcters)"
+            return
+            
+        self._second_password = second_password
+        self.error_message = ""
+        # NO validar aquí, només guardar
+
+    
+    @rx.event()
+    def validate_on_blur(self):
+        """Validar només quan l'usuari canvia de camp (onBlur)"""
+        current_state = (self._first_password, self._second_password)
+        if current_state == self._last_validation_state:
+            return  # No validar si no hi ha canvis
+            
+        self._last_validation_state = current_state
+        
+        # Incrementar el contador només en validacions reales
+        self._validation_attempts += 1
+        
+        # Rate limiting bàsic
+        if self._validation_attempts > self.MAX_VALIDATION_ATTEMPTS:
+            self.is_rate_limited = True
+            self.same_passwords = False
+            self.error_message = "Demasiats intents de validació"
+            return
+        
+        # Validar que les dues coincideixin
+        if not self._first_password or not self._second_password:
+            self.same_passwords = False
+            return
+            
+        if len(self._first_password) < self.MIN_PASSWORD_LENGTH:
+            self.same_passwords = False
+            self.error_message = f"La contrassenya ha de tenir almenys {self.MIN_PASSWORD_LENGTH} caràcters"
+            return
+        
+        try:
+            # Normalizar strings abans de compararles (evitar atacs Unicode)
+            first_normalized = self._first_password.encode('utf-8', errors='strict')
+            second_normalized = self._second_password.encode('utf-8', errors='strict')
+            
+            # Comparació segura de contrasenyes
+            self.same_passwords = secrets.compare_digest(
+                first_normalized,
+                second_normalized
+            )
+            
+            # Generar hash si coinciden
+            if self.same_passwords:
+                self._password_hash = hashlib.sha256(first_normalized).digest()
+                self.error_message = ""
+            else:
+                self.error_message = "Les contrasenyes no coincideixen"
+                
+        except UnicodeEncodeError:
+            self.same_passwords = False
+            self.error_message = "Caràcters invàlids a la contrassenya"
+        except Exception as e:
+            self.same_passwords = False
+            self.error_message = "Error al validar contrasenyes"
+            print(f"Error intern: {type(e).__name__}")
+    
+    
+    def clear_passwords(self):
+        """Neteja les les contrassenyes de memoria (limitat en Python)"""
+        self._first_password = ""
+        self._second_password = ""
+        
+        
+    @rx.event()
+    def reset_rate_limit(self):
+        """Permet resetear el rate limit"""
+        self._validation_attempts = 0
+        self.is_rate_limited = False
+        self.error_message = ""
+        self._last_validation_state = ("", "")
+        
+    @rx.var
+    def password_hash(self) -> str:
+        """Return a hex-encoded password hash if exists"""
+        if self._password_hash:
+            return self._password_hash.hex()
+        return ""
+    
     name: str = ""
     mail: str = ""
     comarca: str = "Alt Camp"
@@ -26,7 +178,79 @@ class NewCoach(rx.State):
     is_dni:bool = False
     tots_els_parametres:bool = False
     
-    
+    rx.var()
+    def set_dilluns(self,dilluns ):
+        self.dilluns=dilluns
+
+        
+    rx.var()
+    def set_dimarts(self,dimarts ):
+        self.dimarts=dimarts
+        
+    rx.var()
+    def set_dimecres(self,dimecres ):
+        self.dimecres=dimecres
+        
+    rx.var()
+    def set_dijous(self,dijous ):
+        self.dijous=dijous
+        
+    rx.var()
+    def set_divendres(self,divendres ):
+        self.divendres=divendres
+        
+    rx.var()
+    def set_dissabte_mati(self,dissabte_mati ):
+        self.dissabte_mati=dissabte_mati
+        
+    rx.var()
+    def set_dissabte_tarda(self,dissabte_tarda ):
+        self.dissabte_tarda=dissabte_tarda
+        
+    rx.var()
+    def set_diumenge_mati(self,diumenge_mati ):
+        self.diumenge_mati=diumenge_mati
+        
+    rx.var()
+    def set_diumenge_tarda(self,diumenge_tarda ):
+        self.diumenge_tarda=diumenge_tarda
+        
+    rx.var()
+    def set_especificacions_dilluns(self,especificacions_dilluns ):
+        self.especificacions_dilluns=especificacions_dilluns
+        
+    rx.var()
+    def set_especificacions_dimarts(self,especificacions_dimarts ):
+        self.especificacions_dimarts=especificacions_dimarts
+        
+    rx.var()
+    def set_especificacions_dimecres(self,especificacions_dimecres ):
+        self.especificacions_dimecres=especificacions_dimecres
+        
+    rx.var()
+    def set_especificacions_dijous(self,especificacions_dijous ):
+        self.especificacions_dijous=especificacions_dijous
+        
+    rx.var()
+    def set_especificacions_divendres(self,especificacions_divendres ):
+        self.especificacions_divendres=especificacions_divendres
+        
+    rx.var()
+    def set_especificacions_dissabte_mati(self,especificacions_dissabte_mati ):
+        self.especificacions_dissabte_mati=especificacions_dissabte_mati
+        
+    rx.var()
+    def set_especificacions_dissabte_tarda(self,especificacions_dissabte_tarda ):
+        self.especificacions_dissabte_tarda=especificacions_dissabte_tarda 
+        
+    rx.var()
+    def set_especificacions_diumenge_mati(self,especificacions_diumenge_mati ):
+        self.especificacions_diumenge_mati=especificacions_diumenge_mati
+        
+    rx.var()
+    def set_especificacions_diumenge_tarda(self,especificacions_diumenge_tarda ):
+        self.especificacions_diumenge_tarda=especificacions_diumenge_tarda
+
     
     @rx.event()
     def set_name(self, new_name):
@@ -213,9 +437,29 @@ class NewCoach(rx.State):
             "subjects_list": list(self.subjects_list),
             "extra_subject": self.extra_subject,
             "price": self.price,
+            "Horari": [
+                {"dilluns": self.dilluns},  # Quita str() y accede directamente
+                {"dilluns excepcions":self.especificacions_dilluns},
+                {"dimarts": self.dimarts},
+                {"dimarts excepcions":self.especificacions_dimarts},
+                {"dimecres": self.dimecres},
+                {"dimecres excepcions":self.especificacions_dimecres},
+                {"dijous": self.dijous},
+                {"dijous excepcions":self.especificacions_dijous},
+                {"divendres": self.divendres},
+                {"divendres excepcions":self.especificacions_divendres},
+                {"dissabte_mati": self.dissabte_mati},
+                {"dissabte_mati excepcions":self.especificacions_dissabte_mati},
+                {"dissabte_tarda": self.dissabte_tarda},
+                {"dissabte_tarda excepcions":self.especificacions_dissabte_tarda},
+                {"diumenge_mati": self.diumenge_mati},
+                {"diumenge_mati excepcions":self.especificacions_diumenge_mati},
+                {"diumenge_tarda": self.diumenge_tarda},
+                {"diumenge_tarda excepcions":self.especificacions_diumenge_tarda}
+            ],
             "description": self.description,
             "image": self.img if self.img else "Logo_2Students.jpeg",
-            "password": pw._password_hash
+            "password": self._password_hash
         }
         try:
             db.insert_one(new_coach)
@@ -223,3 +467,4 @@ class NewCoach(rx.State):
         except Exception as e:
             print(e)
             return rx.toast.error('S\'ha produït un error en completar el registre.')
+        

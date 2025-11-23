@@ -7,7 +7,6 @@ from web_2Students.components.navbar import navbar
 from web_2Students.pages.backend.back_stuent_coach import NewCoach
 from web_2Students.pages.front.front_subjects import subjects_selector
 from web_2Students.pages.front.calendar import calendar_for_desktop
-from web_2Students.pages.backend.passwords import Passwords
 
 
 
@@ -43,7 +42,7 @@ def front_insertar_coach() -> rx.Component:
             # Requisitos de contraseña
             rx.box(
                 rx.text(
-                    f"Requisits: mínim {Passwords.MIN_PASSWORD_LENGTH} caràcters, màxim {Passwords.MAX_PASSWORD_LENGTH}",
+                    f"Requisits: mínim {NewCoach.MIN_PASSWORD_LENGTH} caràcters, màxim {NewCoach.MAX_PASSWORD_LENGTH}",
                     size="2",
                     color=colors.FOSC.value,
                     opacity="0.7",
@@ -54,8 +53,8 @@ def front_insertar_coach() -> rx.Component:
             # Input per la primera contrasenya
             rx.input(
                 placeholder="Posa la teva contrassenya",
-                on_change=Passwords.set_first_password,
-                on_blur=Passwords.validate_on_blur,  # ✨ Validar al sortir del camp
+                on_change=NewCoach.set_first_password,
+                on_blur=NewCoach.validate_on_blur,  # ✨ Validar al sortir del camp
                 type='password',
                 width="100%",
                 px="4",
@@ -76,21 +75,21 @@ def front_insertar_coach() -> rx.Component:
                     "outline": "none"
                 },
                 required=True,
-                disabled=Passwords.is_rate_limited,
+                disabled=NewCoach.is_rate_limited,
             ),
             
             # Input per la segona contrassenya
             rx.input(
                 placeholder="Repetir contrassenya",
-                on_change=Passwords.set_second_password,
-                on_blur=Passwords.validate_on_blur,  # ✨ Validar al salir del campo
+                on_change=NewCoach.set_second_password,
+                on_blur=NewCoach.validate_on_blur,  # ✨ Validar al salir del campo
                 type='password',
                 width="100%",
                 px="4",
                 py="2",
                 border="1px solid",
                 border_color=rx.cond(
-                    Passwords.same_passwords & (Passwords.error_message == ""),
+                    NewCoach.same_passwords & (NewCoach.error_message == ""),
                     "green",
                     colors.MIG_CLAR.value
                 ),
@@ -108,16 +107,16 @@ def front_insertar_coach() -> rx.Component:
                     "outline": "none"
                 },
                 required=True,
-                disabled=Passwords.is_rate_limited,
+                disabled=NewCoach.is_rate_limited,
             ),
             
             # Missatge d'error
             rx.cond(
-                Passwords.error_message != "",
+                NewCoach.error_message != "",
                 rx.hstack(
                     rx.icon(tag='circle-x', color='red', size=16),
                     rx.text(
-                        Passwords.error_message,
+                        NewCoach.error_message,
                         color='red',
                         size='2',
                         weight='medium',
@@ -131,7 +130,7 @@ def front_insertar_coach() -> rx.Component:
             
             # Indicador de contrassenyes coincidents
             rx.cond(
-                Passwords.same_passwords & (Passwords.error_message == ""),
+                NewCoach.same_passwords & (NewCoach.error_message == ""),
                 rx.hstack(
                     rx.icon('circle-check-big', color='green', size=16),
                     rx.text(
@@ -147,7 +146,7 @@ def front_insertar_coach() -> rx.Component:
                 ),
             ),
             rx.cond(
-                Passwords.same_passwords & (Passwords.error_message == ""),
+                NewCoach.same_passwords & (NewCoach.error_message == ""),
                 rx.button(
                     "Finalitzar registre",
                     bg=colors.MIG.value,
@@ -158,10 +157,10 @@ def front_insertar_coach() -> rx.Component:
             ),
             # Botón de reset si está bloqueado
             rx.cond(
-                Passwords.is_rate_limited,
+                NewCoach.is_rate_limited,
                 rx.button(
                     "Reiniciar",
-                    on_click=Passwords.reset_rate_limit,
+                    on_click=NewCoach.reset_rate_limit,
                     size="2",
                     margin_top="1em",
                     bg=colors.FOSC.value,
