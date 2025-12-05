@@ -61,3 +61,8 @@ def calendar_for_desktop() -> rx.Component:
             ),
         )
     )
+    
+
+
+def calendar_for_mobile() -> rx.Component:
+    return rx.box()

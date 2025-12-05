@@ -7,173 +7,176 @@ from web_2Students.components.navbar import navbar
 from web_2Students.pages.backend.back_stuent_coach import NewCoach
 from web_2Students.pages.front.front_subjects import subjects_selector
 from web_2Students.pages.front.calendar import calendar_for_desktop
+from web_2Students.pages.front.mobile_student_coach import mobile_student_coach
 
 
 
 def front_insertar_coach() -> rx.Component:
-    return rx.card(
-        rx.vstack(
-            # Título
-            rx.text.strong(
-                "Tots els paràmetres s'han omplert correctament!",
-                margin_top='1em',
-                size='4'
-            ),
-            
-            rx.text(
-                "Establiu contrassenya per finalitzar el registre com a StudentCoach.",
-                margin_y='0.5em',
-                weight="bold"
-            ),
-            
-            # Información de seguridad
-            rx.hstack(
-                rx.icon(tag='info', color=colors.FOSC.value),
-                rx.text(
-                    """
-                    La contrassenya que trieu serà la que fareu servir per entrar al
-                    vostre compte, es important que sigui segura i que no la compartiu amb ningú més.""",
-                    margin_bottom='1em',
+    return rx.tablet_and_desktop(
+        rx.card(
+            rx.vstack(
+                # Título
+                rx.text.strong(
+                    "Tots els paràmetres s'han omplert correctament!",
+                    margin_top='1em',
+                    size='4'
                 ),
-                align="start",
-                width="100%",
-            ),
-            
-            # Requisitos de contraseña
-            rx.box(
+                
                 rx.text(
-                    f"Requisits: mínim {NewCoach.MIN_PASSWORD_LENGTH} caràcters, màxim {NewCoach.MAX_PASSWORD_LENGTH}",
-                    size="2",
+                    "Establiu contrassenya per finalitzar el registre com a StudentCoach.",
+                    margin_y='0.5em',
+                    weight="bold"
+                ),
+                
+                # Información de seguridad
+                rx.hstack(
+                    rx.icon(tag='info', color=colors.FOSC.value),
+                    rx.text(
+                        """
+                        La contrassenya que trieu serà la que fareu servir per entrar al
+                        vostre compte, es important que sigui segura i que no la compartiu amb ningú més.""",
+                        margin_bottom='1em',
+                    ),
+                    align="start",
+                    width="100%",
+                ),
+                
+                # Requisitos de contraseña
+                rx.box(
+                    rx.text(
+                        f"Requisits: mínim {NewCoach.MIN_PASSWORD_LENGTH} caràcters, màxim {NewCoach.MAX_PASSWORD_LENGTH}",
+                        size="2",
+                        color=colors.FOSC.value,
+                        opacity="0.7",
+                    ),
+                    margin_bottom="0.5em",
+                ),
+                
+                # Input per la primera contrasenya
+                rx.input(
+                    placeholder="Posa la teva contrassenya",
+                    on_change=NewCoach.set_first_password,
+                    on_blur=NewCoach.validate_on_blur,  # ✨ Validar al sortir del camp
+                    type='password',
+                    width="100%",
+                    px="4",
+                    py="2",
+                    border="1px solid",
+                    border_color=colors.MIG_CLAR.value,
+                    border_radius="md",
+                    bg='white',
+                    font_size="md",
                     color=colors.FOSC.value,
-                    opacity="0.7",
+                    text_color=colors.FOSC.value,
+                    _placeholder={"color": colors.FOSC.value},
+                    _hover={
+                        "border_color": colors.FOSC.value,
+                    },
+                    _focus={
+                        "border_color": colors.FOSC.value,
+                        "outline": "none"
+                    },
+                    required=True,
+                    disabled=NewCoach.is_rate_limited,
                 ),
-                margin_bottom="0.5em",
-            ),
-            
-            # Input per la primera contrasenya
-            rx.input(
-                placeholder="Posa la teva contrassenya",
-                on_change=NewCoach.set_first_password,
-                on_blur=NewCoach.validate_on_blur,  # ✨ Validar al sortir del camp
-                type='password',
-                width="100%",
-                px="4",
-                py="2",
-                border="1px solid",
-                border_color=colors.MIG_CLAR.value,
-                border_radius="md",
-                bg='white',
-                font_size="md",
-                color=colors.FOSC.value,
-                text_color=colors.FOSC.value,
-                _placeholder={"color": colors.FOSC.value},
-                _hover={
-                    "border_color": colors.FOSC.value,
-                },
-                _focus={
-                    "border_color": colors.FOSC.value,
-                    "outline": "none"
-                },
-                required=True,
-                disabled=NewCoach.is_rate_limited,
-            ),
-            
-            # Input per la segona contrassenya
-            rx.input(
-                placeholder="Repetir contrassenya",
-                on_change=NewCoach.set_second_password,
-                on_blur=NewCoach.validate_on_blur,  # ✨ Validar al salir del campo
-                type='password',
-                width="100%",
-                px="4",
-                py="2",
-                border="1px solid",
-                border_color=rx.cond(
+                
+                # Input per la segona contrassenya
+                rx.input(
+                    placeholder="Repetir contrassenya",
+                    on_change=NewCoach.set_second_password,
+                    on_blur=NewCoach.validate_on_blur,  # ✨ Validar al salir del campo
+                    type='password',
+                    width="100%",
+                    px="4",
+                    py="2",
+                    border="1px solid",
+                    border_color=rx.cond(
+                        NewCoach.same_passwords & (NewCoach.error_message == ""),
+                        "green",
+                        colors.MIG_CLAR.value
+                    ),
+                    border_radius="md",
+                    bg='white',
+                    font_size="md",
+                    color=colors.FOSC.value,
+                    text_color=colors.FOSC.value,
+                    _placeholder={"color": colors.FOSC.value},
+                    _hover={
+                        "border_color": colors.FOSC.value,
+                    },
+                    _focus={
+                        "border_color": colors.FOSC.value,
+                        "outline": "none"
+                    },
+                    required=True,
+                    disabled=NewCoach.is_rate_limited,
+                ),
+                
+                # Missatge d'error
+                rx.cond(
+                    NewCoach.error_message != "",
+                    rx.hstack(
+                        rx.icon(tag='circle-x', color='red', size=16),
+                        rx.text(
+                            NewCoach.error_message,
+                            color='red',
+                            size='2',
+                            weight='medium',
+                        ),
+                        align="center",
+                        spacing="2",
+                        width="100%",
+                        margin_top="0.5em",
+                    ),
+                ),
+                
+                # Indicador de contrassenyes coincidents
+                rx.cond(
                     NewCoach.same_passwords & (NewCoach.error_message == ""),
-                    "green",
-                    colors.MIG_CLAR.value
-                ),
-                border_radius="md",
-                bg='white',
-                font_size="md",
-                color=colors.FOSC.value,
-                text_color=colors.FOSC.value,
-                _placeholder={"color": colors.FOSC.value},
-                _hover={
-                    "border_color": colors.FOSC.value,
-                },
-                _focus={
-                    "border_color": colors.FOSC.value,
-                    "outline": "none"
-                },
-                required=True,
-                disabled=NewCoach.is_rate_limited,
-            ),
-            
-            # Missatge d'error
-            rx.cond(
-                NewCoach.error_message != "",
-                rx.hstack(
-                    rx.icon(tag='circle-x', color='red', size=16),
-                    rx.text(
-                        NewCoach.error_message,
-                        color='red',
-                        size='2',
-                        weight='medium',
+                    rx.hstack(
+                        rx.icon('circle-check-big', color='green', size=16),
+                        rx.text(
+                            "Les contrasenyes coincideixen!",
+                            color='green',
+                            size='2',
+                            weight='medium',
+                        ),
+                        align="center",
+                        spacing="2",
+                        width="100%",
+                        margin_top="0.5em",
                     ),
-                    align="center",
-                    spacing="2",
-                    width="100%",
-                    margin_top="0.5em",
                 ),
-            ),
-            
-            # Indicador de contrassenyes coincidents
-            rx.cond(
-                NewCoach.same_passwords & (NewCoach.error_message == ""),
-                rx.hstack(
-                    rx.icon('circle-check-big', color='green', size=16),
-                    rx.text(
-                        "Les contrasenyes coincideixen!",
-                        color='green',
-                        size='2',
-                        weight='medium',
+                rx.cond(
+                    NewCoach.same_passwords & (NewCoach.error_message == ""),
+                    rx.button(
+                        "Finalitzar registre",
+                        bg=colors.MIG.value,
+                        width="100%",
+                        margin_top="1em",
+                        on_click=NewCoach.insert_student_coach()
                     ),
-                    align="center",
-                    spacing="2",
-                    width="100%",
-                    margin_top="0.5em",
                 ),
-            ),
-            rx.cond(
-                NewCoach.same_passwords & (NewCoach.error_message == ""),
-                rx.button(
-                    "Finalitzar registre",
-                    bg=colors.MIG.value,
-                    width="100%",
-                    margin_top="1em",
-                    on_click=NewCoach.insert_student_coach()
+                # Botón de reset si está bloqueado
+                rx.cond(
+                    NewCoach.is_rate_limited,
+                    rx.button(
+                        "Reiniciar",
+                        on_click=NewCoach.reset_rate_limit,
+                        size="2",
+                        margin_top="1em",
+                        bg=colors.FOSC.value,
+                        color="white",
+                    ),
                 ),
+                
+                width="100%",
+                spacing="3",
             ),
-            # Botón de reset si está bloqueado
-            rx.cond(
-                NewCoach.is_rate_limited,
-                rx.button(
-                    "Reiniciar",
-                    on_click=NewCoach.reset_rate_limit,
-                    size="2",
-                    margin_top="1em",
-                    bg=colors.FOSC.value,
-                    color="white",
-                ),
-            ),
-            
-            width="100%",
-            spacing="3",
-        ),
-        bg=colors.MIG.value,
-        margin_top='1em',
-        padding="1.5em",
+            bg=colors.MIG.value,
+            margin_top='1em',
+            padding="1.5em",
+        )
     )
 
 
@@ -650,6 +653,9 @@ def student_coach() -> rx.Component:
                     bg=colors.CLAR.value
                 )
             )
+        ),
+        rx.mobile_only(
+            mobile_student_coach()
         )
     )
 

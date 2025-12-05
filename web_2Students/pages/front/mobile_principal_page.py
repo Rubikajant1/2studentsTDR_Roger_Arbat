@@ -5,6 +5,8 @@ import reflex as rx
 from web_2Students.components.navbar import navbar
 from web_2Students.styles.colors import Colors as colors
 
+
+
 def principal_mobile_page() -> rx.Component:
     return rx.box(
         navbar(),

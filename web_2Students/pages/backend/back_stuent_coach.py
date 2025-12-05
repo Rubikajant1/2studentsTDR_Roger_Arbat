@@ -427,6 +427,8 @@ class NewCoach(rx.State):
     """----------------------------------------------------------------------"""
     def insert_student_coach(self):
         """Funció per inserir el nou student coach a la base de dades"""
+        if db.find_one({"dni": self.dni}):
+            return rx.toast.error('Ja existeix un usuari registrat amb aquest DNI/NIE.')
         new_coach = {
             "name": self.name,
             "mail": self.mail,
