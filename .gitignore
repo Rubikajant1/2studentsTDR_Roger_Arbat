@@ -6,3 +6,4 @@ assets/external/
 .states
 .qodo
 mongodb_str.py
+uploaded_files/
