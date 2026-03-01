@@ -379,7 +379,7 @@ def student_coach() -> rx.Component:
                                 placeholder="Dia",
                                 on_change=NewCoach.set_dia_neixament,
                                 max_length=2,
-                                width="100%",
+                                width="6.5%",
                                 px="4",
                                 py="2",
                                 border="1px solid",
@@ -404,7 +404,7 @@ def student_coach() -> rx.Component:
                                 placeholder="Mes",
                                 on_change=NewCoach.set_mes_neixament,
                                 max_length=2,
-                                width="100%",
+                                width="7.5%",
                                 px="4",
                                 py="2",
                                 border="1px solid",
@@ -429,7 +429,7 @@ def student_coach() -> rx.Component:
                                 placeholder="Any",
                                 on_change=NewCoach.set_any_neixament,
                                 max_length=4,
-                                width="100%",
+                                width="8%",
                                 px="4",
                                 py="2",
                                 border="1px solid",
@@ -470,7 +470,7 @@ def student_coach() -> rx.Component:
                         rx.menu.root(
                             rx.menu.trigger(
                                 rx.text(
-                                    "Mes assignatures",
+                                    "Altres assignatures",
                                     padding_bottom='0.4em',
                                     padding_top='0.5em'
                                 ),

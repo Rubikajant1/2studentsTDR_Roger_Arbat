@@ -50,8 +50,8 @@ def subjects_selector() -> rx.Component:
                 ),
                 width = '100%'
             ),
-            rx.text(f"Assignatures seleccionades: {NewCoach.current_subject}"),
-            rx.text(f"Llista: {NewCoach.subjects_list}")
+            rx.text(rx.text.strong("Assignatura seleccionada:   "), f"{NewCoach.current_subject}", margin_top="0.7em"),
+            rx.text(rx.text.strong("Llista:   "), f"{NewCoach.subjects_list}")
         )
     )
 
@@ -100,7 +100,7 @@ def mobile_subjects_selector() -> rx.Component:
                     width='100%'
                 ),
             ),
-            rx.text(f"Assignatures seleccionades: {NewCoach.current_subject}"),
+            rx.text(rx.text.strong("Assignatura seleccionada: "), f"{NewCoach.current_subject}"),
             rx.text(f"Llista: {NewCoach.subjects_list}"),
         )
     )

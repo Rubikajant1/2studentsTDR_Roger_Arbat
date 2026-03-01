@@ -470,7 +470,7 @@ def mobile_student_coach() -> rx.Component:
                         rx.menu.root(
                             rx.menu.trigger(
                                 rx.text(
-                                    "Mes assignatures",
+                                    "Altres assignatures",
                                     padding_bottom='0.4em',
                                     padding_top='0.5em'
                                 ),

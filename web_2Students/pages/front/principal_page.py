@@ -25,18 +25,18 @@ def principal_page() -> rx.Component:
                     rx.flex(
                         rx.vstack(
                             rx.heading(
-                                "La missió de 2Students"
+                                "L'objectiu de 2Students"
                             ),
                             rx.text(
                                 """
-                                Aquesta app ha estat creada amb la finalitat de crear una comunitat d'aprenentatge entre estudiants. D'una banda, permet als alumnes que
+                                Aquesta web ha estat creada amb la finalitat de crear una comunitat d'aprenentatge entre estudiants. D'una banda, permet als alumnes que
                                 destaquen en certes assignatures obtenir una compensació econòmica mentre comparteixen els seus coneixements. D'altra banda, ofereix una
                                 alternativa valuosa als estudiants que necessiten suport addicional.
                                 """,
                             ),
                             rx.text(
                                 """
-                                Aprendre d'un student coach té avantatges únics: ells han superat els mateixos reptes recentment, entenen perfectament les dificultats actuals
+                                Aprendre d'un StudentCoach té avantatges únics: ells han superat els mateixos reptes recentment, entenen perfectament les dificultats actuals
                                 del curs i poden compartir estratègies d'estudi que han funcionat en el seu propi camí d'aprenentatge.
                                 """
                             ),
@@ -81,7 +81,7 @@ def principal_page() -> rx.Component:
                             ),
                             rx.text(
                                 """
-                                Si busques ajuda, podràs explorar perfils dels student coaches i contactar amb qui millor s'adapti a les teves necessitats.
+                                Si busques ajuda, podràs explorar perfils dels StudentCoaches i contactar amb qui millor s'adapti a les teves necessitats.
                                 Si ofereixes ajuda, crearàs el teu perfil destacant les teves habilitats i establint la teva disponibilitat. La plataforma facilita la
                                 coordinació d'espais i horaris, tant presencials com en línia, i gestiona els pagaments de manera segura.
                                 """
@@ -108,7 +108,7 @@ def principal_page() -> rx.Component:
                     rx.flex(
                         rx.vstack(
                             rx.heading(
-                                "Comença a buscar el teu student coach!"
+                                "Comença a buscar el teu StudentCoach!"
                             ),
                             rx.text(
                                 """
@@ -132,11 +132,12 @@ def principal_page() -> rx.Component:
                         )
                     ),
                     rx.button(
-                        "Vull trobar el meu student coach!",
+                        "Vull trobar el meu StudentCoach!",
                         margin_x = '1em',
                         bg = colors.MIG_CLAR.value,
                         width = '40%',
-                        radius='full'
+                        radius='full',
+                        on_click= rx.redirect('/find_coach', is_external=False)
                         
                     ),
                     bg = colors.CLAR.value,
@@ -155,12 +156,12 @@ def principal_page() -> rx.Component:
                         ),
                         rx.vstack(
                             rx.heading(
-                                "Comparteix el teu coneixement, sigues un student coach!",
+                                "Comparteix el teu coneixement, sigues un StudentCoach!",
                             ),
                             rx.text(
                                 """
                                 Tens facilitat per alguna assignatura? Els teus companys et demanen ajuda habitualment? Posa el teu talent al servei d'altres estudiants i 
-                                converteix-te en un student coach.
+                                converteix-te en un StudentCoach.
                                 """,
                             align="left" 
                             ),
@@ -182,13 +183,13 @@ def principal_page() -> rx.Component:
                     ),
                     rx.box(
                         rx.button(
-                            "Vull ser un student coach!",
+                            "Vull ser un StudentCoach!",
                             margin_x = '1em',
                             bg = colors.MIG_CLAR.value,
                             width = '40%',
                             radius='full',
                             margin_top='1em',
-                            on_click=rx.redirect('/new_student_coach', is_external=True)
+                            on_click=rx.redirect('/new_student_coach', is_external=False)
                         ),
                         display="flex",
                         justify_content="flex-end",

@@ -65,4 +65,104 @@ def calendar_for_desktop() -> rx.Component:
 
 
 def calendar_for_mobile() -> rx.Component:
-    return rx.box()
+    day_container_style = dict(
+        width="100%",
+        spacing="2",
+        align_items="start",
+        padding_bottom="1.5em",
+        border_bottom="1px solid #f0f0f0",
+        margin_bottom="1em"
+    )
+
+    return rx.box(
+        rx.text("Posa l'horari que et va be per donar classe", 
+                margin_bottom="1.5em", 
+                font_weight="bold",
+                text_align="center"),
+        
+        rx.vstack(
+            # Dilluns
+            rx.vstack(
+                rx.text("Dilluns", font_weight="semibold"),
+                rx.input(placeholder="Ex: 16:00 - 18:00", on_change=cnd.set_dilluns, width="100%"),
+                rx.text("Especificacions (opcional)", font_size="0.8em", color="gray"),
+                rx.input(placeholder="Ex: Excepte les 17:00", on_change=cnd.set_especificacions_dilluns, width="100%"),
+                style=day_container_style
+            ),
+
+            # Dimarts
+            rx.vstack(
+                rx.text("Dimarts", font_weight="semibold"),
+                rx.input(placeholder="Ex: 16:00 - 18:00", on_change=cnd.set_dimarts, width="100%"),
+                rx.text("Especificacions (opcional)", font_size="0.8em", color="gray"),
+                rx.input(placeholder="Ex: Només presencial", on_change=cnd.set_especificacions_dimarts, width="100%"),
+                style=day_container_style
+            ),
+
+            # Dimecres
+            rx.vstack(
+                rx.text("Dimecres", font_weight="semibold"),
+                rx.input(placeholder="Ex: 16:00 - 18:00", on_change=cnd.set_dimecres, width="100%"),
+                rx.text("Especificacions (opcional)", font_size="0.8em", color="gray"),
+                rx.input(placeholder="Ex: I de 8:00 a 10:00 online", on_change=cnd.set_especificacions_dimecres, width="100%"),
+                style=day_container_style
+            ),
+
+            # Dijous
+            rx.vstack(
+                rx.text("Dijous", font_weight="semibold"),
+                rx.input(placeholder="Ex: 16:00 - 18:00", on_change=cnd.set_dijous, width="100%"),
+                rx.text("Especificacions (opcional)", font_size="0.8em", color="gray"),
+                rx.input(placeholder="Ex: No presencial", on_change=cnd.set_especificacions_dijous, width="100%"),
+                style=day_container_style
+            ),
+
+            # Divendres
+            rx.vstack(
+                rx.text("Divendres", font_weight="semibold"),
+                rx.input(placeholder="Ex: 16:00 - 18:00", on_change=cnd.set_divendres, width="100%"),
+                rx.text("Especificacions (opcional)", font_size="0.8em", color="gray"),
+                rx.input(placeholder="Ex: I les 20:00", on_change=cnd.set_especificacions_divendres, width="100%"),
+                style=day_container_style
+            ),
+
+            # Dissabte Matí
+            rx.vstack(
+                rx.text("Dissabte (Matí)", font_weight="semibold"),
+                rx.input(placeholder="Ex: 09:00 - 13:00", on_change=cnd.set_dissabte_mati, width="100%"),
+                rx.text("Especificacions (opcional)", font_size="0.8em", color="gray"),
+                rx.input(placeholder="Ex: Matins nomes presencial", on_change=cnd.set_especificacions_dissabte_mati, width="100%"),
+                style=day_container_style
+            ),
+
+            # Dissabte Tarda
+            rx.vstack(
+                rx.text("Dissabte (Tarda)", font_weight="semibold"),
+                rx.input(placeholder="Ex: 16:00 - 19:00", on_change=cnd.set_dissabte_tarda, width="100%"),
+                rx.text("Especificacions (opcional)", font_size="0.8em", color="gray"),
+                rx.input(placeholder="Ex: Tardes presencial i online", on_change=cnd.set_especificacions_dissabte_tarda, width="100%"),
+                style=day_container_style
+            ),
+
+            # Diumenge Matí
+            rx.vstack(
+                rx.text("Diumenge (Matí)", font_weight="semibold"),
+                rx.input(placeholder="Ex: 09:00 - 13:00", on_change=cnd.set_diumenge_mati, width="100%"),
+                rx.text("Especificacions (opcional)", font_size="0.8em", color="gray"),
+                rx.input(placeholder="Ex: Matins nomes online", on_change=cnd.set_especificacions_diumenge_mati, width="100%"),
+                style=day_container_style
+            ),
+
+            # Diumenge Tarda
+            rx.vstack(
+                rx.text("Diumenge (Tarda)", font_weight="semibold"),
+                rx.input(placeholder="Ex: 16:00 - 19:00", on_change=cnd.set_diumenge_tarda, width="100%"),
+                rx.text("Especificacions (opcional)", font_size="0.8em", color="gray"),
+                rx.input(placeholder="Ex: Tardes presencial", on_change=cnd.set_especificacions_diumenge_tarda, width="100%"),
+                style=day_container_style
+            ),
+            width="100%",
+            padding_x="1em"
+        ),
+        width="100%"
+    )

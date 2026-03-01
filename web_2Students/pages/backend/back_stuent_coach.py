@@ -461,7 +461,8 @@ class NewCoach(rx.State):
             ],
             "description": self.description,
             "image": self.img if self.img else "Logo_2Students.jpeg",
-            "password": self._password_hash
+            "password": self._password_hash,
+            "type": "student_coach"
         }
         try:
             db.insert_one(new_coach)
