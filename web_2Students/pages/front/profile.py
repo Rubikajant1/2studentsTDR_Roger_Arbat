@@ -1,93 +1,8 @@
 import reflex as rx
-from bson import ObjectId
 from web_2Students.styles.colors import Colors as colors
 from web_2Students.components.navbar import navbar
-from web_2Students.pages.backend.back_stuent_coach import AuthState, user_coach
-from typing import Dict, List, Any
-
-
-
-class ProfileState(rx.State):
-    coach_data: Dict[str, Any] = {}
-
-    @rx.var
-    def coach_subjects_all(self) -> List[str]:
-        # 1. Obtenemos la lista principal del DICCIONARIO coach_data
-        # Usamos .get() porque coach_data es un dict en ProfileState
-        lista_principal = self.coach_data.get("subjects_list", [])
-        
-        # 2. Obtenemos el subject extra
-        extra = self.coach_data.get("extra_subject", "").strip()
-        
-        # 3. Combinamos
-        totes = list(lista_principal)
-        if extra:
-            totes.append(extra)
-            
-        return totes
-    
-    
-    @rx.var
-    def coach_image_url(self) -> str:
-        # Obtenemos el campo "image" del diccionario de datos del coach
-        img = self.coach_data.get("image", "").strip()
-        
-        # 1. Si no hay imagen, ponemos el logo por defecto
-        if not img:
-            return "/Logo_2Students.jpeg"
-        
-        # 2. Si es una URL externa (http), la devolvemos tal cual
-        if img.startswith(("http://", "https://")):
-            return img
-        
-        # 3. SI LA RUTA ES LOCAL (Subida por el usuario):
-        # Si la base de datos devuelve solo "Professor.jpg", 
-        # debemos transformarlo en "/uploaded_files/Professor.jpg"
-        
-        # Primero limpiamos posibles barras iniciales para no duplicarlas
-        clean_img = img.lstrip("/")
-        
-        # Si el nombre del archivo ya contiene 'uploaded_files', solo aseguramos la barra inicial
-        if "uploaded_files" in clean_img:
-            return f"/{clean_img}"
-        
-        # Si es solo el nombre del archivo, le ponemos la ruta completa
-        return f"/uploaded_files/{clean_img}"
-    
-    
-    
-    @rx.event
-    def get_coach_info(self):
-        """Busca los datos del coach usando el ID de la URL"""
-        c_id = self.router.page.params.get("coach_id")
-        
-        try:
-            if c_id:
-                user = user_coach.find_one({"_id": ObjectId(c_id)})
-                if user:
-                    user["_id"] = str(user["_id"])
-                    if "password" in user: 
-                        del user["password"]
-                    # Aseguramos que subjects exista para evitar errores en el frontend
-                    if "subjects" not in user:
-                        user["subjects"] = []
-                    
-                    self.coach_data = user
-                else:
-                    self.coach_data = {}
-        except Exception as e:
-            print(f"Error en get_coach_info: {e}")
-            self.coach_data = {}
-
-    @rx.event
-    async def init_profile_page(self):
-        auth_state = await self.get_state(AuthState)
-        result = auth_state.check_login()
-        
-        if result is not None:
-            return result
-
-        return self.get_coach_info()
+from web_2Students.pages.backend.back_stuent_coach import AuthState
+from web_2Students.pages.backend.back_profile import CoachState, ProfileState
 
 
 
@@ -101,7 +16,9 @@ def profile_page_coach() -> rx.Component:
             ProfileState.coach_data,
             rx.container(
                 rx.vstack(
+                    # --- SALUDO ---
                     rx.heading(f"Hola, {ProfileState.coach_data['name']}", margin_top='2em'),
+                    
                     rx.button(
                         "Tancar Sessió",
                         on_click=AuthState.logout,
@@ -112,7 +29,8 @@ def profile_page_coach() -> rx.Component:
                         margin_top="1.5em",
                         margin_bottom="3em"
                     ),
-                    # Sección de perfil principal
+
+                    # --- SECCIÓN DE PERFIL PRINCIPAL ---
                     rx.flex(
                         rx.image(
                             src=ProfileState.coach_image_url, 
@@ -123,28 +41,70 @@ def profile_page_coach() -> rx.Component:
                             shadow="lg"
                         ),
                         rx.vstack(
-                            rx.heading(ProfileState.coach_data['name'], size="9", color=colors.MIG_FOSC.value),
-                            rx.hstack(
-                                rx.badge(f"📍 {ProfileState.coach_data['comarca']}", size="3", color_scheme="blue"),
-                                rx.badge(f"{ProfileState.coach_data['price']}€/hora", size="3", color=colors.MIG.value),
+                            # NOMBRE: Click para editar
+                            rx.cond(
+                                CoachState.editing_field == "name",
+                                rx.input(
+                                    value=ProfileState.coach_data['name'],
+                                    on_change=CoachState.set_nombre,
+                                    on_blur=CoachState.stop_editing, # Solo limpia el estado
+                                    auto_focus=True,
+                                ),
+                                rx.heading(
+                                    ProfileState.coach_data['name'], 
+                                    on_click=lambda: CoachState.set_editing("name"), # Especificamos qué abrimos
+                                    cursor="pointer",
+                                    size="9"
+                                ),
                             ),
+                            
+                            rx.hstack(
+                                # COMARCA: Click para editar
+                                rx.cond(
+                                    CoachState.editing_field == "comarca",
+                                    rx.input(
+                                        value=ProfileState.coach_data['comarca'],
+                                        on_change=CoachState.set_comarca,
+                                        on_blur=CoachState.stop_editing,
+                                        auto_focus=True,
+                                    ),
+                                    rx.badge(
+                                        f"📍 {ProfileState.coach_data['comarca']}",
+                                        on_click=lambda: CoachState.set_editing("comarca"),
+                                        cursor="pointer",
+                                        size="3"
+                                    ),
+                                ),
+                                # PRECIO: Click para editar
+                                rx.cond(
+                                    CoachState.editing_field == "price",
+                                    rx.input(
+                                        value=ProfileState.coach_data['price'],
+                                        on_change=CoachState.set_precio,
+                                        on_blur=CoachState.stop_editing,
+                                        auto_focus=True,
+                                    ),
+                                    rx.badge(
+                                        f"€ {ProfileState.coach_data['price']}€/hora",
+                                        color=colors.MIG.value,
+                                        on_click=lambda: CoachState.set_editing("price"),
+                                        cursor="pointer",
+                                        size="3"
+                                    ),
+                                )
+                            ),
+                            
                             rx.separator(width="100%"),
                             rx.text("Especialitats", weight="bold", size="5", padding_top="2"),
                             
-                            # Uso de la Var computada para evitar el ForeachVarError
                             rx.flex(
                                 rx.foreach(
-                                    ProfileState.coach_subjects_all, # <--- IMPORTANTE: Usar la nueva Var
+                                    ProfileState.coach_subjects_all,
                                     lambda s: rx.badge(s, variant="surface", size="3", color=colors.MIG.value)
                                 ),
                                 wrap="wrap", 
                                 spacing="2"
                             ),
-                            
-                            rx.spacer(),
-                            
-                            # Botón de contacto
-                            
                             
                             align_items="start", 
                             spacing="4", 
@@ -158,8 +118,33 @@ def profile_page_coach() -> rx.Component:
                         border_radius="2xl", 
                         shadow="sm"
                     ),
-                    rx.text("Sobre mi", weight="bold", size="5"),
-                    rx.text(ProfileState.coach_data['description'], size="4", line_height="1.6"),
+
+                    # --- SOBRE MI (DESCRIPCIÓN) ---
+                    # --- SOBRE MI (DESCRIPCIÓN) ---
+                    rx.text("Sobre mi", weight="bold", size="5", margin_top="1em"),
+                    rx.cond(
+                        CoachState.editing_field == "description",
+                        rx.text_area(
+                            value=ProfileState.coach_data['description'],
+                            on_change=CoachState.set_descripcion, # Llama a la función que actualiza DB
+                            on_blur=CoachState.stop_editing,      # Cierra el modo edición al salir
+                            auto_focus=True,
+                            width="100%",
+                            height="200px", # Altura fija para que sea cómodo escribir
+                            size="3",
+                        ),
+                        rx.text(
+                            ProfileState.coach_data['description'], 
+                            on_click=lambda: CoachState.set_editing("description"),
+                            size="4", 
+                            line_height="1.6",
+                            cursor="pointer",
+                            padding="10px",
+                            border="1px solid transparent",
+                            _hover={"border": "1px dashed #ccc", "border_radius": "md"} # Efecto visual al pasar el ratón
+                        ),
+                    ),
+                    # --- BOTÓN DE CONTACTO (POPOVER) ---
                     rx.popover.root(
                         rx.popover.trigger(
                             rx.button(
@@ -179,15 +164,16 @@ def profile_page_coach() -> rx.Component:
                         ),
                     ),
                     padding_top="2em", 
-                    padding_bottom="4em"
+                    padding_bottom="4em",
+                    align_items="start",
+                    width="100%"
                 )
             ),
-            # Mientras carga o si no hay datos
+            # Mientras carga
             rx.center(rx.spinner(), height="80vh")
         ),
         bg="#FBFBFE", 
         min_height="100vh",
-        # CORRECCIÓN: on_mount debe llamar a un EVENTO (función), no a un texto
         on_mount=ProfileState.init_profile_page 
     )
 

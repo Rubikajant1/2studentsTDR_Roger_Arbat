@@ -181,7 +181,7 @@ def coach_profile_page() -> rx.Component:
                     rx.vstack(
                         rx.heading(CoachDetailState.coach.name, size="9", color=colors.MIG_FOSC.value),
                         rx.hstack(
-                            rx.badge(f"📍 {CoachDetailState.coach.comarca}", size="3", color_scheme="blue"),
+                            rx.badge(f"📍 {CoachDetailState.coach.comarca}", size="3"),
                             rx.badge(f"{CoachDetailState.coach.price}€/hora", size="3", color=colors.MIG.value),
                         ),
                         rx.separator(width="100%"),
