@@ -658,5 +658,3 @@ def student_coach() -> rx.Component:
             mobile_student_coach()
         )
     )
-
-

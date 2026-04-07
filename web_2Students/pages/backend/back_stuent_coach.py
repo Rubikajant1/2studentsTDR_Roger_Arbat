@@ -4,9 +4,10 @@ from web_2Students.db.db_client import db
 import secrets
 from typing import Optional
 import hashlib
+import bcrypt
 
 
-user_coach = db['student_coach']
+user_coach = db
 
 
 class NewCoach(rx.State):
@@ -251,6 +252,10 @@ class NewCoach(rx.State):
     def set_especificacions_diumenge_tarda(self,especificacions_diumenge_tarda ):
         self.especificacions_diumenge_tarda=especificacions_diumenge_tarda
 
+    @rx.var
+    def has_image(self) -> bool:
+        """Indica si hay una imagen cargada. Corrige el AttributeError."""
+        return self.img != ""
     
     @rx.event()
     def set_name(self, new_name):
@@ -310,7 +315,10 @@ class NewCoach(rx.State):
     
     @rx.event()
     def set_price(self, new_price):
-        self.price = int(new_price)
+        try:
+            self.price = int(new_price)
+        except:
+            print('')
     
     
     """Upload Image functions"""
@@ -425,10 +433,14 @@ class NewCoach(rx.State):
 
 
     """----------------------------------------------------------------------"""
+    @rx.event
     def insert_student_coach(self):
-        """Funció per inserir el nou student coach a la base de dades"""
-        if db.find_one({"dni": self.dni}):
-            return rx.toast.error('Ja existeix un usuari registrat amb aquest DNI/NIE.')
+        if user_coach.find_one({"dni": self.dni}):
+            return rx.toast.error('Ja existeix un usuari amb aquest DNI')
+        
+        salt = bcrypt.gensalt()
+        hashed = bcrypt.hashpw(self._first_password.encode('utf-8'), salt)
+
         new_coach = {
             "name": self.name,
             "mail": self.mail,
@@ -439,35 +451,65 @@ class NewCoach(rx.State):
             "subjects_list": list(self.subjects_list),
             "extra_subject": self.extra_subject,
             "price": self.price,
-            "Horari": [
-                {"dilluns": self.dilluns},  # Quita str() y accede directamente
-                {"dilluns excepcions":self.especificacions_dilluns},
-                {"dimarts": self.dimarts},
-                {"dimarts excepcions":self.especificacions_dimarts},
-                {"dimecres": self.dimecres},
-                {"dimecres excepcions":self.especificacions_dimecres},
-                {"dijous": self.dijous},
-                {"dijous excepcions":self.especificacions_dijous},
-                {"divendres": self.divendres},
-                {"divendres excepcions":self.especificacions_divendres},
-                {"dissabte_mati": self.dissabte_mati},
-                {"dissabte_mati excepcions":self.especificacions_dissabte_mati},
-                {"dissabte_tarda": self.dissabte_tarda},
-                {"dissabte_tarda excepcions":self.especificacions_dissabte_tarda},
-                {"diumenge_mati": self.diumenge_mati},
-                {"diumenge_mati excepcions":self.especificacions_diumenge_mati},
-                {"diumenge_tarda": self.diumenge_tarda},
-                {"diumenge_tarda excepcions":self.especificacions_diumenge_tarda}
-            ],
             "description": self.description,
             "image": self.img if self.img else "Logo_2Students.jpeg",
-            "password": self._password_hash,
+            "password": hashed,
             "type": "student_coach"
         }
         try:
-            db.insert_one(new_coach)
-            return rx.toast.success('Registre completat amb èxit!')
+            result = user_coach.insert_one(new_coach)
+            # Obtenemos el ID generado por MongoDB
+            coach_id = str(result.inserted_id)
+            
+            # Redirigimos dinámicamente a la ruta que definiste: /perfil/[coach_id]
+            return rx.redirect(f"/perfil/{coach_id}")
         except Exception as e:
-            print(e)
-            return rx.toast.error('S\'ha produït un error en completar el registre.')
+            print(f"Error DB: {e}")
+            return rx.toast.error('Error a la base de dades')
         
+        
+class AuthState(rx.State):
+    auth_token: str = rx.Cookie(name="auth_token", same_site="strict")
+    email: str = ""
+    password: str = ""
+
+    # AÑADE ESTOS DOS SETTERS AQUÍ
+    
+    @rx.event
+    def logout(self):
+        """Borra la sesión y redirige al inicio"""
+        self.auth_token = ""  # Al vaciar la cookie, el acceso queda bloqueado
+        return rx.redirect("/login_coach")
+    
+    @rx.event
+    def set_email(self, val: str):
+        self.email = val
+
+    @rx.event
+    def set_password(self, val: str):
+        self.password = val
+
+    @rx.event
+    def check_login(self):
+        url_id = self.router.page.params.get("coach_id")
+        
+        # SI NO HAY TOKEN O NO COINCIDE CON LA URL, REDIRIGIR
+        if not self.auth_token or self.auth_token == "" or self.auth_token != url_id:
+            return rx.redirect("/login_coach")
+        
+        # SI TODO ESTÁ BIEN, NO DEVOLVEMOS NADA
+        return None
+
+    @rx.event
+    def login_coach(self):
+        user = user_coach.find_one({"mail": self.email, "type": "student_coach"})
+        if user and "password" in user:
+            try:
+                if bcrypt.checkpw(self.password.encode('utf-8'), bytes(user["password"])):
+                    # Guardamos el ID en la cookie
+                    self.auth_token = str(user["_id"])
+                    # Redirigimos a su perfil dinámico
+                    return rx.redirect(f"/my_profile/{self.auth_token}")
+            except Exception as e:
+                print(f"Error: {e}")
+        return rx.window_alert("Correu o contrasenya incorrectes.")

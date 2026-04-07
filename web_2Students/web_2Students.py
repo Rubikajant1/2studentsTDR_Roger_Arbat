@@ -3,6 +3,18 @@ from web_2Students.styles.styles import BASE_STYLE
 from web_2Students.pages.front.principal_page import principal_page
 from web_2Students.pages.front.student_coach import student_coach
 from web_2Students.pages.front.search import search_page, SearchState, coach_profile_page
+from web_2Students.pages.front.profile import oauth_coach_page, profile_page_coach
+from web_2Students.pages.backend.back_profile import ProfileState
+from web_2Students.pages.backend.back_stuent_coach import AuthState
+
+
+def get_coach_info():
+    ProfileState.check_auth_and_load()
+    return AuthState.check_login()
+
+    
+    
+    
 
 # Configuració de la web
 config = rx.Config(
@@ -43,4 +55,17 @@ app.add_page(
     coach_profile_page, 
     route="/perfil/[coach_id]", 
     title="Perfil de Coach"
+)
+
+# 4. Página de perfil dinámico por ID (CAMBIADO A coach_id)
+app.add_page(
+    oauth_coach_page, 
+    route="/login_coach", 
+    title="Login Coach"
+)
+
+app.add_page(
+    profile_page_coach, 
+    route="/my_profile/[coach_id]", 
+    on_load=ProfileState.init_profile_page, 
 )
