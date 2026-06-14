@@ -1,9 +1,12 @@
 import reflex as rx
-from typing import List, Dict, Any
+from typing import List
 from bson import ObjectId
 from web_2Students.db.db_client import db
 from web_2Students.styles.colors import Colors as colors
 from web_2Students.components.navbar import navbar
+from web_2Students.pages.front.prova_calendari import vista_cliente_calendario, ClienteCalendarState
+
+
 
 # --- 1. MODELO DE DATOS ---
 class Coach(rx.Base):
@@ -213,6 +216,7 @@ def coach_profile_page() -> rx.Component:
                             margin_top="2em"
                         ),
                     ),
+                    vista_cliente_calendario(),
                     rx.popover.content(
                         rx.flex(
                             rx.text(f"Escriu a: {CoachDetailState.coach.mail}", color=colors.FOSC.value),

@@ -90,6 +90,9 @@ class CoachState(rx.State):
 
     async def set_comarca(self, val: str):
         await self._update_db_field("comarca", val)
+        
+    async def set_localitzacio(self, val: str):
+        await self._update_db_field("localitzacio", val)
 
     async def set_precio(self, val: str):
         await self._update_db_field("price", val)

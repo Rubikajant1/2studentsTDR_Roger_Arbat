@@ -3,9 +3,10 @@ from web_2Students.styles.styles import BASE_STYLE
 from web_2Students.pages.front.principal_page import principal_page
 from web_2Students.pages.front.student_coach import student_coach
 from web_2Students.pages.front.search import search_page, SearchState, coach_profile_page
-from web_2Students.pages.front.profile import oauth_coach_page, profile_page_coach
+from web_2Students.pages.front.profile import oauth_coach_page, profile_page_coach, ProfileCalendarState
 from web_2Students.pages.backend.back_profile import ProfileState
 from web_2Students.pages.backend.back_stuent_coach import AuthState
+from web_2Students.pages.front.prova_calendari import vista_cliente_calendario,ClienteCalendarState
 
 
 def get_coach_info():
@@ -67,5 +68,17 @@ app.add_page(
 app.add_page(
     profile_page_coach, 
     route="/my_profile/[coach_id]", 
-    on_load=ProfileState.init_profile_page, 
+    on_load=[ProfileState.init_profile_page, ProfileCalendarState.cargar_datos_mes]
+)
+
+app.add_page(
+    vista_cliente_calendario, 
+    route="/c",  
+    on_load=ClienteCalendarState.cargar_datos_mes
+)
+
+app.add_page(
+    vista_cliente_calendario,
+    route="/r",
+    on_load=ClienteCalendarState.cargar_datos_mes
 )

@@ -1,15 +1,153 @@
 ### student_coach.py ###
 
-#Importacions
 import reflex as rx
+from datetime import datetime
+import calendar
 from web_2Students.styles.colors import Colors as colors
 from web_2Students.components.navbar import navbar
 from web_2Students.pages.backend.back_stuent_coach import NewCoach
 from web_2Students.pages.front.front_subjects import subjects_selector
-from web_2Students.pages.front.calendar import calendar_for_desktop
+# Eliminamos la antigua importación del calendario global
 from web_2Students.pages.front.mobile_student_coach import mobile_student_coach
 
+# --- LÓGICA DEL CALENDARIO DE REGISTRO (EN MEMORIA) ---
+BLOQUES_HORARIOS = [
+    "09:00 - 10:00", "10:00 - 11:00", "11:00 - 12:00", "12:00 - 13:00",
+    "13:00 - 14:00", "14:00 - 15:00", "15:00 - 16:00", "16:00 - 17:00", "17:00 - 18:00"
+]
 
+class RegCalendarState(rx.State):
+    """Estado para el calendario durante el registro. Guarda los datos temporalmente."""
+    current_year: int = datetime.now().year
+    current_month: int = datetime.now().month
+    
+    show_modal: bool = False
+    dia_seleccionado: str = ""
+    
+    # Diccionario maestro: { "2026-05-24": ["10:00 - 11:00", "11:00 - 12:00"] }
+    horarios_temporales: dict[str, list[str]] = {}
+    dias_activos: list[str] = [] # Para colorear rápidamente la cuadrícula
+    horas_disponibles_dia: list[str] = []
+
+    @rx.var
+    def month_name(self) -> str:
+        meses = ["", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+        return f"{meses[self.current_month]} {self.current_year}"
+
+    @rx.var
+    def calendar_days(self) -> list[dict]:
+        cal = calendar.Calendar(firstweekday=0)
+        days_list = []
+        for week in cal.monthdayscalendar(self.current_year, self.current_month):
+            for day in week:
+                if day == 0:
+                    days_list.append({"day": "", "date_str": "", "is_current": False})
+                else:
+                    date_str = f"{self.current_year}-{self.current_month:02d}-{day:02d}"
+                    days_list.append({"day": str(day), "date_str": date_str, "is_current": True})
+        return days_list
+
+    def next_month(self):
+        if self.current_month == 12:
+            self.current_month = 1
+            self.current_year += 1
+        else:
+            self.current_month += 1
+
+    def prev_month(self):
+        if self.current_month == 1:
+            self.current_month = 12
+            self.current_year -= 1
+        else:
+            self.current_month -= 1
+
+    def abrir_dia(self, date_str: str):
+        if not date_str: return
+        self.dia_seleccionado = date_str
+        self.horas_disponibles_dia = self.horarios_temporales.get(date_str, [])
+        self.show_modal = True
+
+    def cerrar_modal(self):
+        self.show_modal = False
+        self.dia_seleccionado = ""
+
+    def toggle_hora(self, hora: str):
+        """Añade o quita horas del diccionario temporal."""
+        if self.dia_seleccionado not in self.horarios_temporales:
+            self.horarios_temporales[self.dia_seleccionado] = []
+            
+        horas_puras = list(self.horarios_temporales[self.dia_seleccionado])
+        
+        if hora in horas_puras:
+            horas_puras.remove(hora)
+        else:
+            horas_puras.append(hora)
+            
+        self.horarios_temporales[self.dia_seleccionado] = horas_puras
+        self.horas_disponibles_dia = horas_puras
+        
+        # Actualizamos la lista de colores visuales
+        activos_puros = list(self.dias_activos)
+        if len(horas_puras) > 0 and self.dia_seleccionado not in activos_puros:
+            activos_puros.append(self.dia_seleccionado)
+        elif len(horas_puras) == 0 and self.dia_seleccionado in activos_puros:
+            activos_puros.remove(self.dia_seleccionado)
+        self.dias_activos = activos_puros
+
+
+def celda_admin_reg(day_data: dict) -> rx.Component:
+    is_disponible = RegCalendarState.dias_activos.contains(day_data["date_str"])
+    return rx.cond(
+        day_data["is_current"],
+        rx.button(
+            day_data["day"],
+            on_click=lambda: RegCalendarState.abrir_dia(day_data["date_str"]),
+            variant=rx.cond(is_disponible, "solid", "ghost"),
+            color_scheme=rx.cond(is_disponible, "indigo", "gray"),
+            size="3", width="100%", height="45px", cursor="pointer"
+        ),
+        rx.box(width="100%", height="45px")
+    )
+
+def fila_hora_admin_reg(hora: str) -> rx.Component:
+    activa = RegCalendarState.horas_disponibles_dia.contains(hora)
+    return rx.button(
+        hora,
+        on_click=lambda: RegCalendarState.toggle_hora(hora),
+        width="100%",
+        color_scheme=rx.cond(activa, "indigo", "gray"),
+        variant=rx.cond(activa, "solid", "outline"),
+        cursor="pointer"
+    )
+
+def admin_calendar_registration() -> rx.Component:
+    """Componente de Calendario para insertar durante el registro."""
+    dias = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
+    return rx.card(
+        rx.vstack(
+            rx.hstack(
+                rx.icon_button("chevron-left", on_click=RegCalendarState.prev_month, variant="soft", color_scheme="indigo"),
+                rx.text(RegCalendarState.month_name, size="4", weight="bold", width="150px", align="center"),
+                rx.icon_button("chevron-right", on_click=RegCalendarState.next_month, variant="soft", color_scheme="indigo"),
+                width="100%", justify="between", align="center", padding_bottom="15px", border_bottom="1px solid var(--gray-4)"
+            ),
+            rx.grid(*[rx.text(d, size="2", weight="bold", align="center", color_scheme="gray") for d in dias], columns="7", width="100%", padding_y="10px"),
+            rx.grid(rx.foreach(RegCalendarState.calendar_days, celda_admin_reg), columns="7", gap="2", width="100%"),
+            width="100%"
+        ),
+        
+        rx.dialog.root(
+            rx.dialog.content(
+                rx.dialog.title(f"Horarios para el {RegCalendarState.dia_seleccionado}"),
+                rx.dialog.description("Selecciona las horas iniciales que quieres habilitar:"),
+                rx.vstack(rx.foreach(BLOQUES_HORARIOS, fila_hora_admin_reg), spacing="2", padding_y="15px", width="100%"),
+                rx.hstack(rx.dialog.close(rx.button("Listo", on_click=RegCalendarState.cerrar_modal, color_scheme="indigo", cursor="pointer")), justify="end")
+            ),
+            open=RegCalendarState.show_modal,
+        ),
+        width="100%", padding="20px", box_shadow="sm", border_radius="lg"
+    )
+# --- FIN LÓGICA DEL CALENDARIO ---
 
 def front_insertar_coach() -> rx.Component:
     return rx.tablet_and_desktop(
@@ -525,7 +663,7 @@ def student_coach() -> rx.Component:
                                 )
                             )
                         ),
-                        calendar_for_desktop(),
+                        admin_calendar_registration(),
                         rx.menu.root(
                             rx.menu.trigger(
                                 rx.text(

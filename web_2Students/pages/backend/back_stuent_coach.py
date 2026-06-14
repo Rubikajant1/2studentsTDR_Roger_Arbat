@@ -10,6 +10,17 @@ import bcrypt
 user_coach = db
 
 
+import reflex as rx
+import bcrypt
+import secrets
+import hashlib
+from typing import Optional
+from web_2Students.db.db_client import db
+
+user_coach = db
+
+
+
 class NewCoach(rx.State):
     
     dilluns: str = ""
@@ -504,12 +515,14 @@ class AuthState(rx.State):
     def login_coach(self):
         user = user_coach.find_one({"mail": self.email, "type": "student_coach"})
         if user and "password" in user:
+            print("user and pasword")
             try:
                 if bcrypt.checkpw(self.password.encode('utf-8'), bytes(user["password"])):
+                    print("Password correct")
                     # Guardamos el ID en la cookie
                     self.auth_token = str(user["_id"])
                     # Redirigimos a su perfil dinámico
-                    return rx.redirect(f"/my_profile/{self.auth_token}")
+                    return rx.redirect(path=f"/my_profile/{self.auth_token}",is_external=True,)
             except Exception as e:
                 print(f"Error: {e}")
         return rx.window_alert("Correu o contrasenya incorrectes.")
